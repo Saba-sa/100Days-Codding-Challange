@@ -1,0 +1,160 @@
+:root{
+  --color1:#CCD5AE;
+  --color2:#E9EDC9;
+  --color3:#FEFAE0;
+  --color4:#FAEDCD;
+--fs1:#44423f;
+--fs2:#DF7857;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: var(--color4);
+}
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+h3 {
+  margin-bottom: 10px;
+}
+
+.section-center {
+  background: var(--color2);
+  border-radius: 30px;
+  padding: 2rem;
+  width: 50%;
+  margin: auto;
+}
+
+#inpTask {
+  width: 50%;
+  height: 30px;
+  padding: 10px;
+  background: var(--color3);
+  border: 1px solid var(--fs1);
+  padding: 15px;
+  font-weight: 700;
+  font-size: 20px;
+}
+input#inpTask::placeholder {
+  color: var(--fs1);
+  font-weight: 700;
+}
+#inpTask:focus {
+  outline: var(--fs1);
+  border: 2px solid var(--fs1);
+}
+.submit-btn {
+  background: var(--fs1);
+  color: var(--color4);
+  padding: 9px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.form-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+ul li{
+  border-bottom: 1px solid;
+  margin-bottom:20px;
+}
+.listItem {
+  width: 80%;
+  margin: auto;
+}
+.task-text{
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: transparent;
+}
+.task-text:focus{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid;
+}
+ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+ul li i {
+  cursor: pointer;
+}
+ul li .check {
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--color2);
+  border: 2px solid var(--fs2);
+  -webkit-appearance: none;
+}
+.check:checked {
+  background-color: var(--fs1);
+}
+.complete {
+  color: rgba(85, 76, 76, 0.8);
+  text-decoration: line-through;
+}
+
+    .completed {
+      color: rgba(43, 42, 42, 0.8);
+      text-decoration: line-through;
+    }
+    .completed + div.icons i{
+      color: rgba(43, 42, 42, 0.8);
+      cursor: auto;
+      pointer-events: none;
+    }
+    @media (max-width:918px){
+     .section-center{
+      width: 80%;
+     } 
+    }
+    @media (max-width:561px){
+     .section-center{
+      width: 90%;
+padding-left: 0;
+padding-right: 0;
+    } 
+    .listItem{
+      width: 90%;
+    }
+    }
+    @media (max-width:377px){
+     .section-center{
+      width: 95%;
+    } 
+ul li .icons i{
+  display: block;
+  margin-bottom: 10px;
+}
+    }
+    @media (max-width:300px){
+ul li {
+  display: block;
+  margin-bottom: 10px;
+}
+ul li .icons {
+  display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 10px;
+}
+    }

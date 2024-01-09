@@ -1,0 +1,481 @@
+:root {
+    --mostly: mediumpurple;
+    --text: rgb(243, 247, 240);
+    --heading: rgb(13, 13, 83);
+    --gray: rgb(75, 75, 75);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  .max-width{
+    max-width: 90%;
+    margin: auto;
+  }
+  section.top{
+  min-width: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 10px grey;
+  background: white;
+  padding: 10px;
+  position: relative;
+  z-index: 3;
+  }
+  .topSection {
+      width: 100%;  
+      min-width: fit-content;
+  }
+      textarea {
+        resize: none;
+      }
+      .lastSection {
+      width: 100%;
+      }    
+  .overlay{
+      background: rgba(147, 112, 216, 0.425);
+      width: 100%;
+  height: 100%;
+      position: fixed;
+  top: 0;
+  left: 0;
+      visibility: hidden;
+      transition: z-index 0.5s;
+  }
+  .overlay.open-modal{
+      visibility: visible;
+      z-index: 4;
+  }
+  .detail{
+      border: 2px solid;
+      padding: 90px;
+      background: var(--mostly);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border: none;
+      z-index: 5;
+      transition: opacity 0.5s; 
+  }
+  .detail.rem{
+      z-index: -1;
+      display: none;
+  
+  }
+  .detail p{
+      color: var(--text);
+      font-size: 1.6rem;
+      line-height: 40px;
+  }
+  section.top nav ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+  section.top nav ul li{
+      list-style: none;
+  font-size: 25px;
+  padding: 10px;
+  color:var(--heading);
+  }
+  section.top nav ul li:last-child button{
+      border: 1px solid var(--heading);
+      font-size: 20px;
+      background: none;
+      padding: 10px;
+      border-radius: 0px;
+      cursor: pointer;
+  }
+  header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  border-bottom: 1px solid gray;
+  border-radius: 100px/2px;
+  color: var(--heading);
+  font-size: 1.4rem;
+  }
+  header .price{
+      color: var(--mostly);
+  }
+  .photo{
+      width: 100%;
+      height: auto;
+      border: 2px groove var(--mostly);
+  }
+  p{
+      color: var(--gray);
+      font-size: 1.1rem;
+  }
+  .filter-btns{
+      text-align: center;
+      margin: 20px auto;
+      width: 100%;
+      text-align: center;
+      transition:top 0.9s;
+  }
+  .filter-btns.btnMarT{
+      top: 85%;
+      transition:top 0.9s;
+  }
+  .filter-btns button{
+      background: none;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      color: var(--mostly);
+      border: 2px solid var(--mostly);
+      transition: background 0.3s, transform 0.5s;
+  }
+  .filter-btns button:hover{
+      background: var(--mostly);
+  transform: scale(1.1);
+  color: aliceblue;
+  }
+  .formanuallyInput{
+     background: white;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.397);
+      width: 90%;
+      margin: 0px auto;
+      height: 0;
+      padding: 0px;
+      text-align: center;
+      overflow: hidden;
+      transition: all 0.3s;
+  }
+  .formanuallyInput.active{
+      z-index: 2;
+      padding: 20px;
+      height: min-content;
+      padding-bottom: 90px;
+      transition: all 0.3s;
+  
+  }
+  .formanuallyInput.add{
+  top:0px;    
+  }
+  
+  .formanuallyInput input{
+      width: 20%;
+      padding: 5px;
+   background: white;
+      font-size: 1rem;
+      transition: transform 0.2s;
+  }
+   .formanuallyInput select{
+       padding: 7px;
+   } 
+   .upload{
+      cursor: pointer;
+      width: 10%;
+      height: 100px;
+      border-radius: 5px;
+  border: 1px dotted var(--gray);
+      display: inline-block;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  }
+  .upload img{
+      width: 50%;  
+      height: auto;  
+  cursor: pointer;
+  }
+  .upload.active{
+      padding: 0;
+      height: 100px;
+      border: none;
+  }
+  .upload.active img{
+      width: 100%;
+      height: auto;
+  }
+  .upload.active h4{
+      display: none;
+  }
+  .upload  h4{
+  color: var(--heading);
+  }
+  .formanuallyInput textarea{
+      margin: 20px;
+      margin-right: 0px;
+      width: 50%;
+      resize: none;
+      padding: 20px;
+      font-size: 1.1rem;
+  }
+  .formanuallyInput button{
+     display: block;
+     margin: auto;
+     border: none;
+      width: 15%;
+      border-radius: 10px;
+      padding: 10px;
+      background: rgb(95, 189, 95);
+      color: aliceblue;
+      font-size: 1.2rem;
+      cursor: pointer;
+  }
+  .formanuallyInput button:hover{
+      background: rgb(65, 153, 65);
+  }
+  .formanuallyInput textarea:focus,
+  .formanuallyInput input:focus,
+  .formanuallyInput select:focus{
+      outline:none;
+      box-shadow: 1px 1px 5px rgb(95, 189, 95);
+  }
+  .formanuallyInput{
+      position: relative;
+      z-index: 5;
+  }
+  
+   .counter{
+       width: fit-content;
+       position: relative;
+       right: -70%;
+   color: var(--heading);
+       top: -61px;
+   }
+  
+   .section-center{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+      grid-gap: 40px;
+  width: 100%;
+  padding: 20px;
+  }
+  .menu-item{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+  }
+  .menu-item-img{
+      width: 100%;
+      height: auto;
+      margin-right: 20px; 
+  }
+      header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  border-bottom: 1px solid gray;
+  border-radius: 100px/2px;
+  color: var(--heading);
+  font-size: 1.4rem;
+  }
+  header .price{
+      color: var(--mostly);
+  }
+  .photo{
+      width: 100%;
+      height: auto;
+      border: 2px groove var(--mostly);
+  
+  }
+  @media (max-width:976px){
+      .formanuallyInput.active{
+          width: 80%;
+      } 
+      .max-width{
+        max-width: 93%;
+      }
+    }
+ 
+  
+  @media(max-width:550px){
+      .formanuallyInput .upload{
+          width: 18%;
+          padding: 3px;
+          left: 5%;
+       }
+       .detail{    
+          width: 80%;
+      }
+      .max-width{
+        max-width: 95%;
+      }
+      .section-center {
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        grid-gap: 10px;
+        width: 90%;
+        padding: 0px;
+    }
+    }
+  @media  (max-width:457px){
+    .item-info{
+        width: 100%;
+        height: auto;
+        margin-right: 0px; 
+    }
+    }
+
+  /* @media screen and (max-width:418px){
+      .detail{    
+          width: 90%;
+          padding: 50px;
+      }
+      .section-center{
+          grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  padding-top: 0px;
+  top: 25%;
+     }
+  .menu-item{
+     flex-direction: column;
+     margin-bottom: 0px;
+     top: 0;
+     }
+     .menu-item-img{
+         width: 100%;
+         height: auto;
+         margin-right: 0px; 
+     }
+  
+  .formanuallyInput{
+     width: 100%;
+     margin: 0;
+     height: 0;
+     padding: 0px;
+  }
+  .formanuallyInput.active{
+      width: 100%;
+      padding: 30px;
+  }
+  .formanuallyInput input{
+     display: block;
+     width: 100%;
+     margin-bottom: 10px;
+     padding: 10px;
+  }
+  .formanuallyInput input[type="file"]{
+     display: none;
+  }
+  .formanuallyInput textarea{
+  width: 100%;
+  margin: 0px;
+  }
+  .formanuallyInput .upload{
+     width: 50%;
+     position: static;
+  padding: 5px;
+  }
+  .formanuallyInput select{
+     margin-bottom: 10px;
+     width: 100%;
+     padding: 10px;
+  }
+  .formanuallyInput button{
+      width: 50%;
+  }
+  .counter{
+     left: 87%;
+     top: -40px;
+  }
+  .filter-btn{
+      margin-bottom: 5px;
+  }
+  } */
+  
+  
+@media  (max-width:418px) {
+    .item-info{
+        width: 95%;
+    }
+   .filter-btns{
+       margin: 20px auto;
+       top: 20%;
+    }
+    .filter-btns button{
+        display: inline-block;
+        margin: 5px auto;
+width: 40%;
+    }
+    .filter-btns button:hover{
+        transform: scale(1.04);
+    }
+    .detail{    
+        width: 90%;
+        padding: 50px;
+    }
+    .section-center{
+        grid-template-columns: repeat(1fr);
+padding-top: 0px;
+top: 25%;
+width: 100%;
+padding: 0px;
+   }
+.menu-item{
+    flex-direction: column;
+    margin-bottom: 0px;
+    top: 0;
+    padding: 10px;
+   }
+   .menu-item-img{
+       width: 90%;
+       height: auto;
+       margin-right: 0px; 
+       margin-bottom: 10px;
+    }
+    .item-info{
+        margin-bottom: 30px;     
+}
+.formanuallyInput{
+   width: 100%;
+   margin: 0;
+   height: 0;
+   padding: 0px;
+}
+.formanuallyInput.active{
+    width: 100%;
+    padding: 30px;
+}
+.formanuallyInput input{
+   display: block;
+   width: 100%;
+   margin-bottom: 10px;
+   padding: 10px;
+}
+.formanuallyInput input[type="file"]{
+   display: none;
+}
+.formanuallyInput textarea{
+width: 100%;
+margin: 0px;
+}
+.formanuallyInput .upload{
+   width: 50%;
+   position: static;
+padding: 5px;
+}
+.formanuallyInput select{
+   margin-bottom: 10px;
+   width: 100%;
+   padding: 10px;
+}
+.formanuallyInput button{
+    width: 50%;
+}
+.counter{
+   left: 87%;
+   top: -40px;
+}
+}
+@media (max-width:298px){
+    .max-width{
+        width:100%;
+    }
+    .menu-item{
+        width: 90%;
+        padding: 0;
+    }
+    .menu-item-img,.item-info{
+        width: 70%;
+     }
+}

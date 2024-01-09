@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.container .fab{
+    color: blue;
+    font-size: 80px;
+}
+.container img{
+    width: 80px;
+    box-shadow: 0px 0px 5px rgb(70, 70, 70);
+}
+.container .notify::before{
+position: absolute;
+content: attr(data-count);
+top: 0px;
+right: -3px;
+font-size: 30px;
+font-weight: bold;
+color: white;
+padding: 5px 12px;
+background: linear-gradient(#ff1a1a,#ff0000,#e60000);
+border-radius: 50px;
+line-height: 100%;
+box-shadow: 0 0 10px rgba(0, 0, 0,.2);
+opacity: 0;
+transition: opacity 0.1s linear;
+animation: animate .9s ease-out infinite alternate;
+}
+@keyframes animate {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.09);
+    }
+}
+.notify.add-numb::before{
+    opacity: 1;
+}
+.container .push{
+position: absolute;
+left: -25px;
+top: 100px;
+height: 40px;
+width: 120px;
+color: white;
+font-size: 15px;
+font-weight: bold;
+border: 1px solid #111755;
+background: #1A237E;
+border-radius: 3px;
+line-height: 40px;
+outline: none;
+cursor: pointer;
+}
+.container .push:hover{
+background: #161d6a;
+}

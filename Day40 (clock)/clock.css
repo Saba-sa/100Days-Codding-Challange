@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#closkContainer{
+    height: 40vw;
+    width: 40vw;
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+margin: auto;
+position: relative;
+}
+#hour,#minute,#secound{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+#hour{
+    width: 1%;
+    height: 10%;
+    top: 19%;
+    left: 44.6%;
+    opacity: 0.8;
+}
+#minute{
+    width: 1%;
+    height: 13%;
+    top: 17%;
+    left: 44.6%;
+    opacity: 0.8;
+}
+#secound{
+    width: 1%;
+    height: 17%;
+    top: 13%;
+    left: 44.6%;
+    opacity: 0.8;
+}

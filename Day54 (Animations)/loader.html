@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+
+            background-color: rgb(0, 0, 0);
+        }
+        section{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .loader{
+            position: relative;
+            width: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .loader span{
+            width: 10px;
+            height: 50px;
+            background-color: rgb(15, 110, 199);
+            animation: loading 0.9s infinite linear;
+            animation-delay: calc(0.1s*var(--i));
+        }
+@keyframes loading{
+0%,100%{
+    transform: translateY(-100%);
+    background-color: #bce64a;
+}
+50%{
+    transform: translateY(100%);
+    background-color: rgb(88, 86, 86);
+
+}
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="loader">
+            <span style="--i:0"></span>
+            <span style="--i:3"></span>
+            <span style="--i:6"></span>
+        </div>
+    </section>
+</body>
+</html>

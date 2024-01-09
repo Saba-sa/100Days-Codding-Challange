@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Form valiation</title>
+  </head>
+  <body>
+  
+    <aside class="sidenav">
+      <div class="logo">
+<h1>ScholarshipPortal</h1>
+<i class="fa-solid fa-xmark" onclick="closeNav()"></i>
+
+      </div>
+      <div class="menu">
+          <a href="#about">About</a>
+          <a href="#services">HEC Scholarship</a>
+          <a href="#clients">GB Scholarship</a>
+          <a href="#contact">PHD scholarships</a>
+          <button class="dropdown-btn">Abroad Scholarships
+            <i class="fa-solid fa-caret-down"></i>
+            <i class="fa-solid fa-caret-up hide"></i>  
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Scholarship in China</a>
+            <a href="#">Scholarship in Iran</a>
+            <a href="#">Scholarship in USA</a>
+          </div>
+          <a href="#contact">log out</a>
+      </div>
+    </aside>
+    <main>
+      <div class="icons">
+<i class="fa-solid fa-bars" onclick="openNav()"></i>
+      </div>
+      <div class="main">
+      
+
+        <div class="formtop">
+          <h1>Scholarship Form</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id dolorum
+            sint alias aut ab repellat? Neque hic numquam repellat laborum
+            dolores aperiam, incidunt aliquam minus tempore at ea excet alias
+            aut ab repellat? Neque hic numquam repellat laborum dolores aperiam,
+            incidunt aliquam minus tempore at ea excet alias aut ab repellat?
+            Neque hic numquam repellat laborum dolores aperiam, incidunt aliquam
+            minus tempore at ea excet alias aut ab repellat? Neque hic numquam
+            repellat laborum dolores aperiam, incidunt aliquam minus tempore at
+            ea excepturi facilis!
+          </p>
+          <br />
+          <ol type="I">
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              voluptatem cumque aliquid, ut temporibus.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              voluptatem cumque aliquid, ut temporibus.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              voluptatem cumque aliquid, ut temporibus.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              voluptatem cumque aliquid, ut temporibus.
+            </li>
+          </ol>
+          <br />
+          <input type="checkbox" name="agrrement" id="aggrement" checked />
+          <span class="message"></span>
+
+          <label for="aggrement"
+            >I understand the terms and conditions and I agree with this.</label
+          >
+        </div>
+        <div class="forNavi">
+          <ul>
+            <li><a href="#" id="personalInfo" class="navigation active">Personal Info</a></li>
+            <li><a href="#" id="familyBackground" class="navigation" >Family Background</a></li>
+            <li><a href="#" id="education" class="navigation" >Education</a></li>
+            <li><a href="#" id="references" class="navigation" >References</a></li>
+          </ul>
+        </div>
+        <div class="start">
+        <div class="personalInfo form-class active">
+        <form  class='formTopMost' action="connect.php" method="post">
+          <fieldset>
+            <legend>Personal Info</legend>
+            <div class="row">
+              <label for="Fname">First Name:</label>
+              <input type="text" name="Fname" id="Fname" class="firstName" />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="Mname">Middle Name:</label>
+              <input type="text" name="Mname" id="Mname" class="middleName" />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="Lname">Last Name:</label>
+              <input type="text" name="Lname" id="Lname" class="lastName" />
+              <span class="message"></span>
+            </div>
+            <div class="row us">
+              <div class="cross" onclick="again()"><i class="fa-sharp fa-regular fa-circle-xmark"></i></div>
+              <div class="user">
+                <div class="user-text">
+                  <p>
+                    Upload your picture image should be in the form of png or jpeg
+                  </p>
+                  <label for="UserPic">
+                  <img src="upload.png" alt="" class="upload-icon"></label>
+                  <input
+                    type="file"
+                    name="UserPic"
+                    id="UserPic" accept="image/x-png,image/jpeg"
+                    onchange="change(event)"
+                  />
+                </div>
+              </div>
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="email">Your Email:</label>
+              <input type="email" name="email" id="email" class="email" />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="Yphoneno">Your Phone no:</label>
+              <input type="tel" name="Yphoneno" id="Yphoneno" class="phone"/>
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="FatheFname">Father First Name:</label>
+              <input
+                type="text"
+                name="FatherFname"
+                id="FatherFname"
+                class="firstName"
+              />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="FatherMname">Father Middle Name:</label>
+              <input
+                type="text"
+                name="FatherMname"
+                id="FatherMname"
+                class="middleName"
+              />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="FatherLname">Father Last Name:</label>
+              <input
+                type="text"
+                name="FatherLname"
+                id="FatherLname"
+                class="lastName"
+              />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="Fphoneno">Father's Phone no:</label>
+              <input type="tel" name="Fphoneno" id="Fphoneno" class="phone" />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="MotherFname">Mother First Name:</label>
+              <input
+                type="text"
+                name="MotherFname"
+                id="MotherFname"
+                class="firstName"
+              />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="MotherMname">Mother Middle Name:</label>
+              <input
+                type="text"
+                name="MotherMname"
+                id="MotherMname"
+                class="middleName"
+              />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="MotherLname">Mother Last Name:</label>
+              <input
+                type="text"
+                name="MotherLname"
+                id="MotherLname"
+                class="lastName"
+              />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="=Mphoneno">Mother's Phone no:</label>
+              <input type="tel" name="Mphoneno" id="Mphoneno" class="phone" />
+              <span class="message"></span>
+            </div>
+          </fieldset>
+          <button class="btn" onClick='nextPrev(1)'>Next</button>
+        </form>
+      </div>
+      <div class="familyBackground form-class" id="familyBg">
+        <form class='formTopMost' action="connect2.php" action="post">
+          <fieldset>
+            <legend>Family Background</legend>
+            <div class="row">
+              <label for="Focc">Father occupation:</label>
+              <input type="text" name="Focc" id="Focc" class="Ocupation" />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="FCNIC">Father CNIC:</label>
+              <input type="text" name="FCNIC" id="FCNIC" class="CNIC" placeholder="7140*-*******-*" />
+              <span class="message"></span>
+            </div>
+             <div class="row">
+              <label for="Mocc">Mother occupation:</label>
+              <input type="text" name="Mocc" id="Mocc" class="Ocupation" />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="MCNIC">Mother CNIC:</label>
+              <input type="text" name="MCNIC" id="MCNIC" class="CNIC" placeholder="7140*-*******-*" />
+              <span class="message"></span>
+            </div>
+        
+          </fieldset>
+          <button class="btn" onClick='nextPrev(1)'>next</button>
+        </form>
+        </div>
+      <div class="education form-class">
+        <form class='formTopMost'>
+          <fieldset>
+            <legend>Education</legend>
+           <div class="table-education">
+           <table>
+              <tr>
+                <th>Year</th>
+                <th>Degree</th>
+                <th>Total</th>
+                <th>Obtain</th>
+                <th>Board</th>
+              </tr>
+              <tr>
+          <td class="year">
+            <input type="number" placeholder="e.g 2011-2012">
+          </td>
+          <td class="degree">
+            <input type="text">
+          </td>
+          <td class="total-marks">
+            <input type="number">
+          </td>
+          <td class="obt-marks">
+            <input type="number">
+          </td>
+          <td class="board">
+            <input type="text">
+          </td>
+              </tr>
+              <tr>
+          <td class="year">
+            <input type="number" placeholder="e.g 2011-2012">
+          </td>
+          <td class="degree">
+            <input type="text">
+          </td>
+          <td class="total-marks">
+            <input type="number">
+          </td>
+          <td class="obt-marks">
+            <input type="number">
+          </td>
+          <td class="board">
+            <input type="text">
+          </td>
+              </tr>
+              <tr>
+          <td class="year">
+            <input type="number" placeholder="e.g 2011-2012">
+          </td>
+          <td class="degree">
+            <input type="text">
+          </td>
+          <td class="total-marks">
+            <input type="number">
+          </td>
+          <td class="obt-marks">
+            <input type="number">
+          </td>
+          <td class="board">
+            <input type="text">
+          </td>
+              </tr>
+              <tr>
+          <td class="year">
+            <input type="number" placeholder="e.g 2011-2012">
+          </td>
+          <td class="degree">
+            <input type="text">
+          </td>
+          <td class="total-marks">
+            <input type="number">
+          </td>
+          <td class="obt-marks">
+            <input type="number">
+          </td>
+          <td class="board">
+            <input type="text">
+          </td>
+              </tr>
+            </table>
+
+          </div>
+            <div class="grid">
+<div class="row">
+  <label for="cnic-Pic">Both sided Picture of your CNIC Should be in PDF</label>
+  <input type="file" id="cnic-Pic" name="myfile cnic-Pic" accept="application/pdf">
+  <span class="message"></span>
+
+</div>
+<div class="row">
+  <label for="cnic-Pic">Picture of your metriculation Markseet  Should be in PDF</label>
+  <input type="file" id="cnic-Pic" name="myfile cnic-Pic" accept="application/pdf">
+  <span class="message"></span>
+
+</div>
+<div class="row">
+  <label for="cnic-Pic">Both sided Picture of your intermidate Markseet Should be in PDF</label>
+  <input type="file" id="cnic-Pic" name="myfile cnic-Pic" accept="application/pdf">
+  <span class="message"></span>
+
+</div>
+</div>
+</fieldset>
+<button class="btn" onClick='nextPrev(1)'>next</button>
+</form>
+</div>
+      <div class="references form-class">
+        <form class='formTopMost'>
+        <fieldset>
+          <legend>References</legend>
+<textarea name="references" id="references" cols="30" rows="4"></textarea>          
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus doloremque beatae cupiditate aperiam voluptate assumenda tempore qui, dolore natus consectetur necessitatibus optio dolorem. Debitis, alias dolores necessitatibus a numquam ab.</p>
+<input type="checkbox" name="agree" id="agree" checked>
+<label for="agree">I agree that all the information provided in the form in authentic</label>
+</fieldset>
+<button class="btn lastBtn" type="submit" onclick="nextPrev(1)">Submit</button>
+
+</form>
+      </div>
+    </div>
+      </div>
+    </main>
+    <script src="form.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    text-align: center;
+}
+section>h1{
+font-size: 60px;
+}
+section>p{
+font-size: 30px;
+}
+.flip{
+    text-align: center;
+    height: 80vh;
+    color: rgb(0, 0, 0);
+margin-bottom: 190px;
+position: relative;
+height: 130vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+}
+.card{
+    width: 380px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.card-inner{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+}
+ .front-face{
+    backface-visibility: hidden;
+}
+.front-face img{
+    width: 100%;
+    border-radius: 10px;
+}
+.back-face{
+    backface-visibility: hidden;
+background: #c62600;
+color: white;
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+transform:rotateY(180deg) ;
+}
+.back-face h2{
+    font-size: 50px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.back-face p{
+    font-size: 26px;
+    margin-top: 10px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.social-media i{
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    background: #e43a00;
+    border-radius: 50%;
+    margin: 25px 6px;
+}
+.btn{
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+    background: #fff;
+    padding: 10px 50px;
+    border-radius: 25px;
+    margin: 80px auto 0;
+}
+.card:hover .card-inner{
+    transform: rotateY(-180deg);
+} 
+
+/* +++++++++++++++++upload section++++++++++++++ */
+.upload{
+margin-top: 3rem;
+height: 90vh;
+}
+.upload .container{
+    background: #222;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    max-width: 450px;
+    height: 80%;
+    margin: 20px auto;
+    position: relative;
+}
+#textBox{
+    position: absolute;
+    left: 10;
+    bottom: 0px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    color: white;
+    padding: 10px;
+}
+#prevtext{
+    position: absolute;
+    left: 10%;
+    right: 10px;
+    bottom: 30%;
+word-wrap: break-word;
+    transform: translateX((-50%));
+width: 80%;
+height: auto;
+font-size: 32px;
+text-align: center;
+text-shadow: 2px 2px 20px #000;
+}
+.upload_Icon{
+    position: absolute;
+    width: 60px;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    border-radius: 30%;
+}
+.upload .container p{
+    transform: rotate(316deg);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

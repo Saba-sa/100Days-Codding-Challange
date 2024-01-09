@@ -1,0 +1,32 @@
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+background: rosybrown;
+        }
+.check{
+    max-width: 50%;
+    background: wheat;
+    height: au;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 10px 10px 10px rgb(150, 111, 111);
+}
+.check input,.check button{
+    height: 5vh;
+    width: 30%;
+    margin-top: 20px;
+}
+.check input{
+    width: 30%;
+padding: 10px;
+}
+h2{
+    margin-top: 10px;
+}
+.check_after{
+    display: none;
+}

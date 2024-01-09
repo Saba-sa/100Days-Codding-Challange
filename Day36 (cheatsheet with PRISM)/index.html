@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saba's cheatcheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css" />
+    <script src="prism.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+
+      <div class="icons">
+        <i class="fa-solid fa-bars" onclick="openNav()"></i>
+      </div>
+      <h1>CheetSheet</h1>
+    </div>
+    <main>
+      <section class="sidebar">
+        <div class="closeicon">
+          <i class="fa-solid fa-xmark" onclick="closeNav()"></i>
+        </div>
+        <ol>
+          <li><a href="#scroll" class="active">Scroll bar</a></li>
+          <li><a href="#ToggleBar">Toogle Menu</a></li>
+          <li><a href="#nestedMenu">Nested menu</a></li>
+          <li><a href="#ScoreKepper">Score keeper & decide the winner</a></li>
+          <li><a href="#theme">Theme Changer</a></li>
+          <li><a href="#review">Reviews</a></li>
+          <li><a href="#VideoInBg">video in bg</a></li>
+          <li><a href="#sidebar">sidebar</a></li>
+          <li><a href="#popup">popup</a></li>
+          <li><a href="#nav">nav bar</a></li>
+          <li><a href="#model">model</a></li>
+        </ol>
+      </section>
+      <section class="main-body">
+        <ol>
+          <li id="scroll">
+            University web site
+            <pre class="language-css">
+<code>
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    /* box-shadow: 0 5px 10px white inset;  */
+    box-shadow: 0 5px 10px rgba(17, 17, 17, 0.719) inset; 
+    border-radius: 0px;
+}
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: rgb(15, 15, 15); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(117, 15, 117); 
+  }
+</code>
+            </pre>
+         
+          </li>
+          <li id="ToggleBar">
+            Perfect toggle bar
+            <pre class="language-html">
+    <code>
+        &lt;!DOCTYPE html &gt;
+        &lt;html lang="en" &gt;
+        &lt;head &gt;
+            &lt;meta charset="UTF-8" &gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" &gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" &gt;
+            &lt;link rel="stylesheet" href="task2.css" &gt;
+            &lt;title &gt;Document &lt;/title &gt;
+        &lt;/head &gt;
+        &lt;body &gt;
+            &lt;div class="navigation" &gt;
+       
+                &lt;div class="userBx" &gt;
+                    &lt;div class="imgBx" &gt;
+                        &lt;img src="image/mahdi-chaghari-BGMuQUY91w4-unsplash.jpg" alt="user image" &gt;
+                    &lt;/div &gt;
+                    &lt;p class="username" &gt;Saba Ali &lt;/p &gt;
+                &lt;/div &gt;
+                &lt;div class="menuToggle" &gt; &lt;/div &gt;
+            &lt;/div &gt;
+            &lt;/body &gt;
+            &lt;/html &gt;
+    </code>
+</pre>
+            <pre class="language-css">
+    <code>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(45deg,#4e65ff,#92efff);
+}
+.navigation{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 60px;
+    background: #ffff;
+    box-shadow: 0 25px 35px rgba(0,0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    transition: height 0.5s,width 0.5s ;
+    transition-delay:0s 0.75s;
+}
+.navigation.active
+{
+     width: 300px;
+     height: 400px;
+     transition: width 0.5s, height 0.5s;
+     transition-delay:0s,0.75s ;
+}
+.navigation .userBx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+}
+
+.navigation .userBx .imgBx{
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    background: black;
+    border-radius: 50%;
+    border: 10px solid white;
+    overflow: hidden;
+}
+.navigation .userBx .imgBx img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.navigation .menuToggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .menuToggle::before{
+    content: ' ';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background-color: #555;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    box-shadow: 0 10px #555;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.navigation .menuToggle::after{
+    content: ' ';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background-color: #555;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.navigation.active .menuToggle::before{
+    transform: translateY(0px) rotate(45deg);
+    -webkit-transform: translateY(0px) rotate(45deg);
+    -moz-transform: translateY(0px) rotate(45deg);
+    -ms-transform: translateY(0px) rotate(45deg);
+    -o-transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #555;
+}
+.navigation.active .menuToggle::after{
+    transform: translateY(0px) rotate(-45deg);
+    -webkit-transform: translateY(0px) rotate(-45deg);
+    -moz-transform: translateY(0px) rotate(-45deg);
+    -ms-transform: translateY(0px) rotate(-45deg);
+    -o-transform: translateY(0px) rotate(-45deg);
+}
+    </code>
+</pre>
+            <pre class="language-js">
+    <code>
+        let menuToggle=document.querySelector('.menuToggle');
+        let navigation=document.querySelector('.navigation');
+      menuToggle.onclick=function(){
+        navigation.classList.toggle('active')
+      }
+    </code>
+</pre>
+          </li>
+          <li id="nestedMenu">
+            To created nested menu
+            <pre class="language-html">
+    <code>
+&lt;!DOCTYPE html &gt;
+&lt;html lang="en" &gt;
+&lt;head &gt;
+ &lt;meta charset="UTF-8" &gt;
+ &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" &gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" &gt;
+ &lt;link rel="stylesheet" href="Sub_menju.css" &gt;
+ &lt;title &gt;sub menu &lt;/title &gt;
+&lt;/head &gt;
+&lt;body &gt;
+&lt;div id="menu" &gt;
+&lt;ul &gt;
+&lt;li &gt; &lt;a href="#" &gt;menu1 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;menu2 &lt;/a &gt;
+    &lt;ul &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-1 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-2 &lt;/a &gt;
+    &lt;ul &gt;
+&lt;li &gt; &lt;a href="#" &gt;Deep-menu-1 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;Deep-menu-2 &lt;/a &gt;
+    &lt;ul &gt;
+&lt;li &gt; &lt;a href="#" &gt;Deep-Deep-menu-1 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;Deep-Deep-menu-2 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;Deep-Deep-menu-3 &lt;/a &gt; &lt;/li &gt;
+            &lt;/ul &gt;
+        &lt;/li &gt;
+        &lt;li &gt; &lt;a href="#" &gt;Deep-menu-3 &lt;/a &gt; &lt;/li &gt;
+    &lt;/ul &gt;
+&lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-3 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-4 &lt;/a &gt; &lt;/li &gt;
+&lt;/ul &gt;
+&lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;menu3 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;menu4 &lt;/a &gt;
+&lt;ul &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-1 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-2 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-3 &lt;/a &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;sub-menu-4 &lt;/a &gt; &lt;/li &gt;
+&lt;/ul &gt; &lt;/li &gt;
+&lt;li &gt; &lt;a href="#" &gt;menu5 &lt;/a &gt; &lt;/li &gt;
+&lt;/ul &gt;
+&lt;/div &gt;
+&lt;/body &gt;
+&lt;/html &gt;
+    </code>
+</pre>
+            <pre class="language-css">
+    <code>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#menu > ul {
+  background: #2c3e50;
+}
+#menu ul {
+  list-style: none;
+  position: relative;
+  float: left;
+}
+#menu ul a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0 15px;
+  display: block;
+}
+#menu ul li{
+    float: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li:hover{
+    background: #2ecc71;
+}
+#menu ul ul{
+    position: absolute;
+    background: #27ae60;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+#menu ul ul li{
+    float: none;
+    width: 200px;
+    border-left: 3px solid transparent;
+}
+#menu ul ul li:hover{
+    border-left: 3px solid #2c3e50;
+}
+#menu ul ul ul{
+    top: -4px;
+    left: 100%;
+}
+#menu ul li:hover>ul{
+    display: block;
+}</code>
+</pre>
+          </li>
+          <li id="ScoreKepper">
+            Score keeping app and decides the winner
+            <pre class="language-html">
+    <code>
+&lt;!DOCTYPE html &gt;
+&lt;html lang="en" &gt;
+&lt;head &gt;
+&lt;meta charset="UTF-8" &gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" &gt;
+&lt;meta name="viewport" content="width=s, initial-scale=1.0" &gt;
+&lt;title &gt;Sore keeper &lt;/title &gt;
+   
+&lt;/head &gt;
+&lt;body &gt;
+    &lt;div class="container" &gt;
+      &lt;h1 &gt;Score Keeper &lt;/h1 &gt;
+     
+&lt;img src="image/woliul-hasan-iAwK6_YJUgU-unsplash.jpg" alt="image" &gt;
+&lt;h1 &gt; &lt;span id="player1" &gt;0 &lt;/span &gt;to &lt;span id="player2" &gt;0 &lt;/span &gt; &lt;/h1 &gt;
+&lt;select name="playTO" id="playTo" &gt;
+&lt;option value="3" &gt;3 &lt;/option &gt;
+&lt;option value="4" &gt;4 &lt;/option &gt;
+&lt;option value="5" &gt;5 &lt;/option &gt;
+&lt;option value="6" &gt;6 &lt;/option &gt;
+&lt;option value="7" &gt;7 &lt;/option &gt;
+&lt;option value="8" &gt;8 &lt;/option &gt;
+&lt;option value="9" &gt;9 &lt;/option &gt;
+&lt;option value="10" &gt;10 &lt;/option &gt;
+    &lt;/select &gt;
+   
+&lt;button id="p1Button" &gt;+1 Player One &lt;/button &gt;
+&lt;button id="p2Button" &gt;+1 Player Two &lt;/button &gt;
+&lt;button id="reset" &gt;Reset &lt;/button &gt;
+&lt;/div &gt;
+
+&lt;script src="ScoreKeeper.js" &gt; &lt;/script &gt;
+&lt;/body &gt;
+&lt;/html &gt;
+    </code>
+</pre>
+            <pre class="language-js">
+    <code>
+    const p1btn=document.querySelector('#p1Button')
+    const p2btn=document.querySelector('#p2Button')
+    let p1Score=document.querySelector('#player1')
+    let p2Score=document.querySelector('#player2')
+    let resBtn=document.querySelector('#reset');
+    const playto=document.querySelector('#playTo')
+    let player1=0;
+    let player2=0;
+    let winningScore=5;
+    let isgameOver=false;
+    p1btn.addEventListener('click',()=&gt;{
+        if(!isgameOver){
+            player1++;
+             if(player1===winningScore){
+                isgameOver=true;
+                p1Score.classList.add('winner')
+                p2Score.classList.add('loser')
+    
+            }
+                 p1Score.innerHTML=player1;}
+    })
+    p2btn.addEventListener('click',()=&gt;{
+        if(!isgameOver){
+            player2++;
+        if(player2===winningScore){
+        isgameOver=true;
+        p2Score.classList.add('winner')
+        p1Score.classList.add('loser')
+    
+        }
+        p2Score.innerHTML=player2;
+    
+    }})
+    playto.addEventListener('change',()=&gt;{
+     winningScore=parseInt(playto.value)
+     reset()
+    
+    })
+    resBtn.addEventListener('click',reset)
+    function reset(){
+        isgameOver=false;
+        player1=0;
+        p1Score.innerHTML=player1;
+        player2=0;
+        p2Score.innerHTML=player2;
+        p1Score.classList.remove('winner','loser')
+        p2Score.classList.remove('winner','loser')
+    }    
+    </code>    
+    </pre>
+            <pre class="language-css">
+    <code>
+.winner{
+    color: green;
+}
+.loser{
+    color:red;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 40%;
+    border: 6px groove gray;
+margin: 0 auto;
+padding: 6px;
+text-align: center;
+font-size: 1.2rem;
+background-color: rgb(236, 233, 233);
+}
+.container img{ 
+    max-width: 50%;
+    height: 15rem;
+}
+select{
+    display: block;
+}
+button,#reset{
+width: 30%;
+height: auto;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background-color: rgb(10, 150, 33);
+color: white;
+padding: 10px;
+margin: 15px -4px 0px 0px;
+font-size: 0.9rem;
+box-shadow: 4px 4px 12px black ;
+}
+#reset{
+    border: 5px outset green;
+    background-color: goldenrod;
+    color: black;
+    font-weight: 900;
+}
+#reset:hover{ 
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+#p1Button,#p2Button{
+    border: 5px outset goldenrod;
+background-color: green;
+}
+#p1Button:hover,#p2Button:hover{
+    border-style: inset;
+    cursor: pointer;
+}
+select{
+width: 10%;
+text-align: center;
+display: inline;
+height: 50px;
+border: 2px solid green;
+}
+</code>
+</pre>
+          </li>
+          <li id="review">
+            To create review portion
+            <pre class="language-html">
+   <code>
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="review.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;div class="popup"&gt;
+ &lt;div&gt;
+&lt;p&gt;This project contain dynamically inserted users via js and can also randomly pick any review.&lt;/p&gt;
+   &lt;button type="button" class="ok"&gt;ok&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;nav&gt;
+      &lt;ol&gt;
+        &lt;li&gt;Review section with vanila Js&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/nav&gt;
+    &lt;div class="con"&gt;
+
+      &lt;div class="container"&gt;
+        &lt;article class="review"&gt;
+          &lt;div class="title"&gt;
+            &lt;h2&gt;Our Review&lt;/h2&gt;
+            &lt;div class="underline"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+  &lt;div class="img-container"&gt;
+    &lt;img src="" alt="image of the user" id="personal-img"&gt;
+  &lt;/div&gt;
+  &lt;h4 id="author"&gt;&lt;/h4&gt;
+  &lt;p id="job"&gt;&lt;/p&gt;
+  &lt;p id="info"&gt;
+&lt;/p&gt;
+&lt;div class="button-container"&gt;
+  &lt;button class="prev-btn"&gt;&lt;&lt;/button&gt;
+  &lt;button class="next-btn"&gt;&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;button class="random-btn"&gt;Surprise Me&lt;/button&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="revise.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+   </code>
+</pre>
+            <pre class="language-css">
+    <code>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          .popup{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 255, 0.233);
+            z-index: 3;
+          }
+          .popup div{
+            background: blue;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+          }
+          .popup p{
+            font-size: 20px;
+            color:white;
+          }
+          .ok{
+            padding: 10px;
+           margin-left: 10px;
+           color: aliceblue;
+           border-radius: 10px;
+            border: 2px solid white;
+          cursor: pointer;
+          }
+          nav {
+            box-shadow: 1px 1px 10px gray;
+            width: 100%;
+            padding: 20px;
+            background: white;
+            margin-bottom: 20px;
+          }
+          nav ol li {
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-left: 20px;
+            text-transform: capitalize;
+          }
+          .con {
+              display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 90vh;
+          }
+          .container {
+            text-align: center;
+            width: 500px;
+          }
+          .underline {
+            width: 25%;
+            background: rgb(134, 134, 255);
+            margin: 10px auto;
+            border-radius: 50px;
+            height: 4px;
+            margin-bottom: 40px;
+          }
+          .review {
+            box-shadow: 1px 1px 10px black;
+            padding: 40px;
+            background: white;
+            width: 90%;
+            margin: auto;
+            border-radius: 10px;
+          }
+          .img-container {
+            width: 130px;
+            height: 120px;
+            background: rgb(134, 134, 255);
+            border-radius: 48%;
+            margin: 10px auto;
+            position: relative;
+          }
+          .img-container::before {
+            content: "";
+            width: 80px;
+            height: 90px;
+            background: url(./bluetick.png) no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            left: -29px;
+            top: -12px;
+          }
+          button {
+            margin: 4px;
+            border: none;
+            background: none;
+            color: rgb(134, 134, 255);
+            font-size: 1.2rem;
+            cursor: pointer;
+          }
+          .title {
+            letter-spacing: 2px;
+          }
+          #author {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          }
+          #job {
+            color: rgb(134, 134, 255);
+            font-size: 1.3rem;
+            margin: 5px auto;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+          }
+          #info {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+              "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            margin-bottom: 15px;
+            text-align: left;
+          }
+          #personal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            padding-right: 10px;
+          }
+          .random-btn {
+            border: 1px solid rgb(134, 134, 255);
+            padding: 5px;
+            font-size: 1rem;
+            border-radius: 40px;
+          }
+          @media screen and (max-width:320px) {
+            nav{
+              margin-bottom: 160px;
+            }
+          .con .container .review{
+              width: 100%;
+           border-radius: 0;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 700px) {
+              nav {
+                  margin-bottom: 150px;
+              }
+           
+          }
+          @media screen and (min-width: 700px) and (max-width: 900px) {
+            nav {
+              margin-bottom: 100px;
+              }  }
+          @media screen and (min-width: 900px)and (max-width: 1010px){
+            nav {
+              margin-bottom: 100px;
+            }
+          }
+          @media screen and (min-width: 1010px){
+            nav {
+              margin-bottom: 40px;
+            }
+          }
+          
+    </code>
+</pre>
+            <pre class="language-js">
+   <code>
+    const reviews=[
+    {
+        id:1,
+        name:'saba',
+        job:'web developer',
+        img:'user1.jpg',
+        text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis enim dolor voluptatibus quia dolores veritatis assumenda provident. Reiciendis adipisci eum soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+    {
+        id:2,
+        name:'aliya',
+        job:'graphic designer' ,
+        img:'user2.jpg',
+        text:'dolor sit amet consectetur adipisicing Lorem ipsum  elit. Laborum omnis enim dolor voluptatibus quia dolores veritatis assumenda provident. Reiciendis adipisci eum soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+    {
+        id:3,
+        name:'Aliahba',
+        job:'ui/ux developer' ,
+        img:'user3.jpg',
+        text:'Laborum omnis enim dolor voluptatibus quia dolores veritatis assumenda provident. Reiciendis adipisci eum Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+    {
+        id:4,
+        name:'reena',
+        job:'App developer' ,
+        img:'user4.jpg',
+        text:'Laborum omnis enim dolor voluptatibus quia dolores veritatis assumenda provident. Reiciendis adipisci eum Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+    {
+        id:5,
+        name:'sophia',
+        job:'App developer' ,
+        img:'comments-1.jpg',
+        text:'Laborum omnis enim dolor voluptatibus quia dolores veritatis assumenda provident. Reiciendis adipisci eum Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+    {
+        id:6,
+        name:'Ali',
+        job:'Digitial Markiting' ,
+        img:'comments-6.jpg',
+        text:'voluptatibus quia dolores vaborum omnis enim dolor voluptatibus quia dolores veritatis assumenda provident. Reiciendis adipisci eum Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+    {
+        id:7,
+        name:'Jeia',
+        job:'Content Writter' ,
+        img:'comments-3.jpg',
+        text:'Mibus quLaborum omnis enim dolor voluptatia dolores veritatis assumenda provident. Reiciendis adipisci eum Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+    {
+        id:8,
+        name:'Zoya',
+        job:'Game developer' ,
+        img:'comments-4.jpg',
+        text:'voluptatibus quia dolores veritatis assumenda provident. Reiciendis adipisci eum Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta aperiam dicta deserunt praesentium blanditiis aliquid esse officia?' 
+    },
+
+]
+let authorName=document.getElementById('author')
+let authorImage=document.getElementById('personal-img')
+let authorJob=document.getElementById('job')
+let authorReview=document.getElementById('info')
+let previous=document.querySelector('.prev-btn')
+let next=document.querySelector('.next-btn')
+let random=document.querySelector('.random-btn')
+let count=0;
+window.addEventListener('DOMContentLoaded',()=>{
+    show(count)
+})
+previous.addEventListener('click',()=>{
+    if(count>0){
+        count--;
+       show(count)
+}
+else{
+        count=reviews.length-1;
+        show(count)
+    }
+})
+next.addEventListener('click',()=>{
+    if(count<reviews.length-1)
+    {   count++;
+        show(count)
+}
+else{
+    count=0;
+    show(count)
+}
+})
+
+    function show(count){
+        let review=reviews[count]
+    authorName.innerText=review.name
+    authorJob.innerText=review.job
+    authorImage.src=review.img
+    authorReview.innerText=review.text
+    }
+random.addEventListener('click',()=>{
+    let rand=Math.floor(Math.random()*reviews.length)
+    show(rand)
+})
+let ok=document.querySelector('.ok')
+ok.addEventListener('click',()=>{
+   let pop=document.querySelector('.popup')
+  pop.style.display='none'
+})
+   </code>
+</pre>
+          </li>
+          <li id="VideoInBg">
+            I have used a video in bg and also control button is used
+            <pre class="language-html">
+      <code>
+        &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="videoPlayer.css"&gt;
+    &lt;script src="videoPlayer.js" defer&gt;&lt;/script&gt;
+    &lt;title&gt;Video Player in bg&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="pre-loader"&gt;
+        &lt;img src="./zita-loader.gif" alt="preloader"&gt;
+    &lt;/div&gt;
+    &lt;header&gt;
+        &lt;video class="video-container"  muted autoplay loop&gt;
+            &lt;source src="./vid.mp4" type="video/mp4"&gt;
+        &lt;/video&gt;
+        &lt;h1&gt;Video in bg&lt;/h1&gt;
+        &lt;button class="switch-btn"&gt;
+            &lt;span class="play"&gt;play&lt;/span&gt;
+            &lt;span class="pause"&gt;pause&lt;/span&gt;
+            &lt;span class="switch"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+    </pre>
+            <pre class="language-css">
+      <code>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      .pre-loader{
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      background: rgb(255, 255, 255);
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      visibility: visible;
+      z-index: 5;
+      }
+      .pre-loader img{
+          width: 290%;
+      }
+      .hide-preloader{
+          z-index: -5;
+          visibility: hidden;
+      }
+      header{
+          min-height: 100vh;
+          position: relative;
+          display: grid;
+          place-items: center;
+      }
+      .video-container{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -2;
+      }
+      h1{
+          color: rgb(0, 0, 0);
+          font-size: 4rem;
+      }
+      h1:hover{
+          -webkit-text-stroke:1px;
+          -webkit-text-fill-color: transparent;
+      }
+      
+      header::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(39, 39, 39, 0.473);
+      z-index: -1;
+      }
+      .switch-btn{
+      border:2px solid navy;
+          position: absolute;
+      left: 10%;
+      top: 80%;
+      height:7vh;
+      border-radius: 20px;
+      }
+      .switch-btn span{
+          border: 3px solid transparent;
+          padding: 10px;
+          width: 70px;
+          font-size: 19px;
+          cursor: pointer;
+          color: navy;
+          font-weight: bold;
+      }
+      .switch-btn .switch{
+          border-radius: 10px;
+          background: rgb(0, 0, 218);
+          position: absolute;
+          height: 70%;
+          top: 4px;
+          left: 5px;
+          transition: right 0.3s,left 0.3s;
+      }
+      .switch-btn .switch.right{
+      right: 0;
+      left: 45%;
+      
+      }
+      @media screen and (max-width:800px) {
+          .switch-btn{
+              padding-bottom: 10px;
+          }
+          .switch-btn .switch{
+              height: 70%;
+              top: 0px;
+              
+          }
+       
+          
+      }
+      </code>
+    </pre>
+            <pre class="language-js">
+      <code>
+        let video=document.querySelector('video')
+        , pla=document.querySelector('.play')
+        , pau=document.querySelector('.pause')
+        , swicth=document.querySelector('.switch');
+        
+        pau.addEventListener('click',()=>{
+            video.pause();
+        swicth.classList.add("right")
+        
+        })
+        
+        pla.addEventListener('click',()=>{
+            video.play();
+            swicth.classList.remove("right")
+        
+        })
+        let preloader=document.querySelector('.pre-loader')
+        window.addEventListener('load',()=>{
+            preloader.classList.add('hide-preloader')
+        })
+      </code>
+    </pre>
+          </li>
+          <li id="sidebar"> it a sidebar
+            <pre class="language-html">
+        <code>
+          &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"&gt;
+    &lt;link rel="shortcut icon" href="./clock.png" /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+   
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="popup"&gt;
+      &lt;div&gt;
+     &lt;p&gt;This project contain a perfect navbar for all screen sizes.&lt;/p&gt;
+        &lt;button type="button" class="ok"&gt;OK&lt;/button&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+    &lt;button class="sidebar-toggle" onclick="show()"&gt;      &lt;i class="fa-solid fa-bars"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;aside class="sidebar"&gt;
+      &lt;div class="sidebar-header"&gt;
+&lt;p class="logo"&gt;Sidebar&lt;/p&gt;
+        &lt;button class="close-btn"&gt;&lt;i class="fa-solid fa-square-xmark"&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;ul class="links"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="socialMediaIcons"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa-brands fa-facebook-f"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa-brands fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa-brands fa-whatsapp"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa-brands fa-snapchat"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+
+        </code>
+      </pre>
+            <pre class="language-css">
+        <code>
+          <style>
+            *{
+              margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+            }
+            .popup{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 255, 0.233);
+        z-index: 3;
+      }
+      .popup div{
+        background: blue;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .popup p{
+        font-size: 25px;
+        color:rgb(247, 247, 247);
+      }
+      .ok{
+        padding: 10px;
+        margin-top: 20px;
+       margin-left: 10px;
+       color: rgb(8, 9, 10);
+       border-radius: 10px;
+        border: 2px solid white;
+      cursor: pointer;
+      }
+            .logo {
+                color: aliceblue;
+                font-size: 50px;
+            }
+            .sidebar-header{
+              display: flex;
+          align-items: center;
+          justify-content: space-evenly;  
+          }
+            .sidebar {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: mediumslateblue;
+              display: grid;
+              grid-template-rows: auto 1fr auto;
+              row-gap: 1rem;
+              border-top-right-radius: 50px;
+              box-shadow: 1px 1px 10px black;
+              transition: 0.5s;
+              transform: translate(-100%);
+            }
+            .show-sidebar{
+              transform: translate(0);
+            }
+            .sidebar-toggle{
+              position: absolute;
+              right: 10px;
+              padding: 10px;
+              display: block;
+              animation: scale 0.9s  0.4s infinite alternate-reverse backwards;
+      }
+          @keyframes scale {
+              0%{
+      transform: scale(1.2);
+      }
+      100%{
+          transform: scale(1);
+              }
+          }
+          ul{
+            text-align: center;
+            margin-top: 40px;
+          }
+      
+            ul li{
+              list-style: none;
+          font-size: 20px;  
+      margin-bottom: 20px;
+      }
+      .close-btn{
+        background: transparent;
+          border: none;
+          outline: none;
+      }
+      .close-btn i{
+        font-size: 20px;
+        color: rgb(37, 37, 231);
+        cursor: pointer;
+      }
+      ul li a{
+          color: whitesmoke;    
+          text-decoration: none;
+      }
+          .links li:hover a{
+             letter-spacing: 2px;
+          }
+      
+          .socialMediaIcons{
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+          }
+          .socialMediaIcons li{
+            transition: transform 0.3s;
+          }
+          .socialMediaIcons li:hover{
+      transform: translateY(-10px);
+          }
+            @media screen and (min-width: 676px) {
+                .sidebar {
+                    width: 400px;
+                  }
+             
+            }
+          </style>
+        </code>
+      </pre>
+            <pre class="language-js">
+        <code>
+            function show(){
+                document.querySelector('.sidebar').classList.toggle('show-sidebar')
+            }
+            let cross=document.querySelector('.close-btn')
+            cross.addEventListener('click',()=>{
+            document.querySelector('.sidebar').classList.remove('show-sidebar')
+        })
+      let ok=document.querySelector('.ok')
+    ok.addEventListener('click',()=>{
+       let pop=document.querySelector('.popup')
+      pop.style.display='none'
+    })
+        </code>
+      </pre>
+          </li>
+          <li id="popup"> It shows usermade  popup. 
+            <pre class="language-html">
+        <code>
+          &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;popup&lt;/title&gt;
+  
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;button&gt; type="submit" class="btn" onclick="openPopup()"&gt;Submit&lt;/button&gt;
+    &lt;div class="popup" id="pop"&gt;
+        &lt;img src="./tick.png" alt="ok logo"&gt;
+        &lt;h2&gt;Thank You&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, explicabo?&lt;/p&gt;
+    &lt;button&gt; type="button" onclick="closePopup()"&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+   
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+            <pre class="language-css">
+        <code>
+          <style>
+            *{
+                margin: 0;
+                padding: 0;
+    box-sizing: border-box;
+            }
+            .container{
+                width: 100%;
+                height: 100vh;
+                background: #3c5077;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .btn{
+                padding: 10px 60px;
+                background: #fff;
+                border: 0;
+                outline: none;
+                cursor: pointer;
+                font-size: 22px;
+                font-weight: 500;
+                border-radius: 30px;
+            }
+            .popup{
+                width: 400px;
+                background: #fff;
+                border-radius: 6px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-50%) scale(0.1);
+                text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.4s,top 0.4s;
+        }
+        .popup.open{
+                visibility: visible;
+                top: 50%;
+                transform: translate(-50%,-50%) scale(1);
+                
+            }
+            .popup img{
+                width: 50%; 
+                /* width: 100%;  */
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+            .popup h2{
+                font-size: 38px;
+                font-weight: 500;
+            margin: 30px 0 10px;
+            }
+            .popup button{
+                width: 100%;
+                margin-top: 50px;
+                padding: 10px 0;
+                background: #6fd649;
+                color: #fff;
+                border: 0;
+                outline: none;
+                font-size: 18px;
+                border-radius: 4px;
+                cursor: pointer;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+            </style>
+        </code>
+      </pre>
+            <pre class="language-js">
+        <code>
+ <script>
+let popup=document.getElementById('pop')
+function openPopup(){
+popup.classList.add('open')
+}
+function closePopup(){
+popup.classList.remove('open')
+}
+</script>
+        </code>
+      </pre>
+          </li>
+          <li id="model"> It is an example of model
+            <pre class="language-html">
+        <code>&lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+              &lt;link rel="shortcut icon" href="./clock.png" type="image/x-icon"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;header class="hero"&gt;
+          &lt;div class="banner"&gt;
+              &lt;h1&gt;modal projects&lt;/h1&gt;
+          &lt;button class="btn modal-btn"&gt;
+              open modal
+          &lt;/button&gt;
+          &lt;/div&gt;
+          
+              &lt;/header&gt;
+          &lt;div class="modal-overlay"&gt;
+              &lt;div class="modal-container"&gt;
+          &lt;h3&gt;modal content&lt;/h3&gt;
+          &lt;button class="close"&gt;-&lt;/button&gt;    
+          &lt;/div&gt;
+          &lt;/div&gt;
+          
+          &lt;/body&gt;
+          &lt;/html&gt;</code>
+      </pre>
+            <pre class="language-css">
+        <code>
+          <style>
+            body{
+              background: url('./annie-spratt-wuc-KEIBrdE-unsplash.jpg') no-repeat center;  
+            background-size: cover;
+            /* backdrop-filter: blur(10px); */
+            }
+            .banner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 2px solid;
+            padding: 50px;
+            background: white;
+            border-radius: 10px;
+            border: none;
+            transform: translate(-50%,-50%);
+            }
+            .banner h1{
+                font-size: 2.3rem;
+                color: rgb(5, 5, 44);
+                text-transform: uppercase;
+            }
+            .banner button{
+                width: 80%;
+                padding: 10px;
+                display: block;
+                margin: auto;
+                background: rgb(73, 151, 177);
+                color: antiquewhite;
+                font-size: 1.3rem;
+                border: none;
+             cursor: pointer;
+                border-radius: 20px;
+            }
+            .banner button:hover{
+                background: rgb(44, 144, 177);   
+            }
+            .modal-overlay{
+                position: fixed;
+                top: 0;
+                left: 0;
+            width: 100%;
+            height: 100%;
+            background:  rgba(44, 144, 177, 0.342);  
+            display: grid;
+            place-items: center;
+            visibility: hidden;
+            z-index: -10;
+            }
+            .modal-container{
+            padding: 50px;
+            background: white;
+            border-radius: 10px;
+            border: none;
+            position: relative;
+            }
+            .modal-container h3{
+                font-size: 2rem;
+                    color: rgb(5, 5, 44);
+                    text-transform: uppercase;
+                }
+                .modal-container button{
+                    width: 30px;
+                padding: 0px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: rgb(73, 151, 177);
+                color: antiquewhite;
+                font-size: 1.3rem;
+                border-radius: 0px;
+                border: none;
+                font-weight: 900;
+             cursor: pointer;
+                }
+            .open-modal{
+                visibility: visible;
+                z-index: 10;
+            }
+            </style>
+        </code>
+      </pre>
+            <pre class="language-js">
+        <code>
+            let close=document.querySelector('.close')
+            let mOverlay=document.querySelector('.modal-overlay')
+            let btn=document.querySelector('.btn')
+            btn.addEventListener('click',()=>{
+            mOverlay.classList.add('open-modal')
+            })
+            close.addEventListener('click',()=>{
+                mOverlay.classList.remove('open-modal')
+            
+            })
+        </code>
+      </pre>
+          </li>
+        </ol>
+      </section>
+    </main>
+  <script>
+    function openNav() {
+      document.querySelector(".sidebar").classList.add('large')
+      document.querySelector(".sidebar").classList.remove('small')
+}
+
+function closeNav() {
+  document.querySelector(".sidebar").classList.remove('large')
+  document.querySelector(".sidebar").classList.add('small')
+}
+window.addEventListener('load',()=>{
+  if(window.innerWidth<826){
+    document.querySelector(".sidebar").classList.add('small')
+  }
+  else{
+    document.querySelector(".sidebar").classList.remove('small')
+    document.querySelector(".sidebar").classList.remove('large')
+  }
+})
+let a=document.querySelectorAll('.sidebar ol li a')
+a.forEach((i)=>{
+i.addEventListener('click',()=>{
+  a.forEach((i)=>i.classList.remove('active'))
+  i.classList.add('active')
+})
+})
+  </script>
+  </body>
+
+</html>

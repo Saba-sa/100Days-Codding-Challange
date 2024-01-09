@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }  
+      .container{
+        width: 100%;
+        height: 100vh;
+        background: #060606;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      form{
+        background: white;
+        width: 600px;
+        height: 55px;
+        display: flex;
+      }
+      form input{
+        flex: 1;
+border: none;
+outline: none;
+      }
+      form button{
+        color: aliceblue;
+        background: tomato;
+        cursor: pointer;
+        padding: 10px 50px;
+        letter-spacing: 1px;
+        border: none;
+        outline: none;
+      }
+      form .icon{
+        align-self: center;
+        padding:10px 20px;
+        color:black;
+/* when you add icon del the font size */
+        font-size: 30px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="icon">🏝</div>
+            <input type="text" placeholder="what  you wanna search">
+       <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

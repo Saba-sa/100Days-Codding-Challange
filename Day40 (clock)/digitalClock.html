@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: rgb(240, 194, 148);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div{
+        width: 20%;
+        height: 30vh;
+        top: 90px;
+        border-radius: 50%;
+        border: 5px groove rgb(247, 137, 27);;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        position: absolute;
+    }
+    div h1{
+        padding-top: 60px;
+    }
+</style>
+</head>
+<body>
+    <div>
+<h1 class="digit">
+</h1>
+    </div>
+    <script>
+        setInterval(myFunc,1000)
+      function myFunc(){  let date=new Date;
+        document.querySelector('h1').innerText=date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+      }
+      myFunc();
+      </script>
+</body>
+</html>

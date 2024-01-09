@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reviewSide.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial">
+           <div class="testimonial-text">
+            <div class="user-text">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus veniam quam enim  impedit repellendus tempore. Dolore, animi. Corrupti quisquam accusamus, eligendi sunt in autem?</p> 
+           <span>Name,CEO ABC companey</span>
+            </div>
+            <div class="user-text active-text">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis beatae cupiditate veritatis architecto fuga nobis?</p>
+                <span>Name,CEO VVV companey</span>
+            </div>
+            <div class="user-text">
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto omnis veritatis deserunt consequuntur dolores, obcaecati ratione modi tempora natus!</p>           <span>Name,CEO ABC companey</span>     
+</div>
+            <div class="user-text">
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cumque error rerum facere dignissimos ad sunt optio nesciunt sed at!</p>           <span>Name,CEO ABC companey</span>        
+</div>
+            <div class="user-text">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas inventore molestiae quis nam mollitia nobis voluptatibus sint, quod illo a nisi praesentium!</p>           <span>Name,CEO ABC companey</span>          
+</div>
+        </div>
+        <div class="testtimonial-pic">
+            <img src="images/Alexandra.svg" alt="Image" class="user-pic" onclick="ShowReview()">
+            <img src="images/Janet.svg" alt="Image" class="user-pic active-pic"onclick="ShowReview()" >
+            <img src="images/Peg_Legge.svg" alt="Image" class="user-pic"onclick="ShowReview()" >
+            <img src="images/Richard.svg" alt="Image" class="user-pic" onclick="ShowReview()">
+            <img src="images/Alexandra.svg" alt="Image" class="user-pic"onclick="ShowReview()" >
+        </div>
+        </div>
+    </div>
+<script>
+let userText=document.getElementsByClassName("user-text");
+let userPics=document.getElementsByClassName("user-pic");
+function ShowReview(){
+    for(userPic of userPics){
+        userPic.classList.remove("active-pic")
+    }
+    for(usertext of userText){
+        usertext.classList.remove("active-text")
+    }
+    let i=Array.from(userPics).indexOf(event.target);
+    userPics[i].classList.add("active-pic");
+    userText [i].classList.add("active-text");
+}
+
+
+</script>    
+</body>
+</html>

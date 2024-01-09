@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #2b323c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.container h1{
+    font-size: 80px;
+    font-weight: 600;
+}
+span{
+    color: rgb(247, 188, 78);
+    position: relative;
+}
+span::after{
+    content: '';
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    animation: animi linear 3s infinite alternate;
+    background:#2b323c;
+}
+@keyframes animi {
+    0%{  
+        left: 0%;   
+border-left: 2px solid yellow;
+}
+25%{  
+    background:#2b323c;
+    border-left: 2px solid yellow;
+
+}
+50%{ 
+
+    background:#2b323c;
+    border-left: 2px solid yellow;
+}
+100%{
+
+    background:#2b323c;
+    border-left: 2px solid yellow;
+left: 100%;
+    }
+} 

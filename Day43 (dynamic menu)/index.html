@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="menu.css" />
+        <script src="menu.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay">
+    </div>
+    <div class="detail">
+       <p>This project contains the use of filter,resize the images before showing them and have local storage</p>
+    </div>
+  <div class="topSection ">
+    <section class="top max-width">
+      <nav>
+        <ul>
+          <li>A menu having add functionality</li>
+          <li>
+            <button onclick="show()" class="show">add</button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="formanuallyInput">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Product name"
+        required
+      />
+      <select id="category" required>
+        <option value="#" disabled selected>Select anyone category</option>
+        <option value="breakfast">breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+      </select>
+
+      <input
+        type="number"
+        name="price"
+        id="price"
+        class="price"
+        placeholder="product price"
+        required
+      />
+      <input type="file" id='image' accept="image/*" onchange="imageUrl(event)" hidden/>
+      <label for="image">
+
+          <div class="upload">    
+              <img src="./images/upload.png" alt="image" title="upload an image">
+              <h4>Upload the item image</h4>
+            </div>
+        </label>
+      <textarea
+        rows="9"
+        cols="10"
+        id="description"
+        minlength="149"
+        maxlength="150"
+        placeholder="Short description no more than 150 words"
+      > </textarea>
+      <p class="counter"></p>
+      <button onclick="check()">Add</button>
+    </div>
+  </div>
+  <div class="lastSection">
+
+      <section class="filter-btns max-width"">
+          <button class="filter-btn" data-id="All">All</button>
+          <button class="filter-btn" data-id="breakfast">Break fast</button>
+          <button class="filter-btn" data-id="Lunch">Lunch</button>
+          <button class="filter-btn" data-id="Dinner">Dinner</button>
+        </section>
+        <div class="section-center max-width""></div>
+    </div>
+  </body>
+</html>

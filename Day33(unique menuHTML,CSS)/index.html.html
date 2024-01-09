@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+        }
+        .navigation{
+            position: relative;
+            width: 70px;
+            height: 70px;
+            background: rgb(107, 107, 107);
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        transition-delay: 0.8s;
+        }
+        .navigation.active{
+            width: 200px;
+            height: 200px;
+            transition-delay: 0.1s;
+        }
+        .navigation span{
+            position: absolute;
+            display: flex;
+            width: 7px;
+            justify-content: center;
+            align-items: center;
+            height: 7px;
+            background: white;
+            border-radius: 50%;
+            transform: translate(calc(12px*var(--x)),calc(12px*var(--y)));
+       transition: transform 0.5s,width 0.5s,height 0.5s,background 0.5s;
+    transition-delay: calc(0.1s*var(--i));   
+    }
+        .navigation.active span{
+            width: 45px;
+            height: 45px;
+background: #333849;
+transform: translate(calc(60px*var(--x)),calc(60px*var(--y)));
+        } 
+        .navigation span p{
+            transition: 0.5s;
+            font-size: 0em;
+        }
+        .navigation.active span p{
+            font-size: 1.35em;
+            color: white;
+        }
+        .navigation.active span:hover p{
+            color: #2dfc52;
+            filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52) drop-shadow(0 0 15px #2dfc52);
+        }
+    </style>
+</head>
+<body>
+   <div class="navigation">
+    <span style="--i:0;--x:-1;--y:0"><p>🖐</p></span>
+    <span style="--i:1;--x:1;--y:0"> <p>☀</p></span>
+    <span style="--i:2;--x:0;--y:-1"><p>☀</p></span>
+    <span style="--i:3;--x:0;--y:1"><p>☾</p></span>
+    <span style="--i:4;--x:1;--y:1"><p>⛰</p></span>
+    <span style="--i:5;--x:-1;--y:-1"><p>🖋</p></span>
+    <span style="--i:6;--x:0;--y:0"><p>📙</p></span>
+    <span style="--i:7;--x:-1;--y:1"><p>🚙</p></span>
+    <span style="--i:8;--x:1;--y:-1"><p>⭐</p></span>
+   </div> 
+   <script>
+    let navigation=document.querySelector('.navigation')
+    navigation.addEventListener('click',()=>{
+navigation.classList.toggle('active')
+    })
+   </script>
+</body>
+</html>

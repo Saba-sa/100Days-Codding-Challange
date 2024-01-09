@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Ratting.css">
+    <title>Document</title>
+
+</head>
+<body>  
+<div class="container">
+<div class="img">
+</div>
+<div class="range-inp">
+    <input type="range" id="result" step="10" onchange="update()">
+</div>
+    </div>
+<script>
+    let data=[
+        {crying:'    <i class="fas fa-sad-tear"></i>'},
+        {sad:'<i class="fas fa-frown"></i>'},
+        {satisfied:'<i class="fas fa-smile"></i>'},
+        {good:'<i class="fas fa-smile-beam"></i>'},
+        {exelent:'<i class="fas fa-laugh-beam"></i>'},
+    ]
+    let result=document.querySelector('#result');
+    let img=document.querySelector('.img');
+    let r=null; 
+function update(){
+    r=result.value;
+    resultCheck(r)
+}
+function resultCheck(res){
+ if(res<30){
+    let r=data[0].crying;
+img.innerHTML=`${r}`
+ }
+ else if(res>=30 && res <50){
+    let r=data[1].sad;
+img.innerHTML=`${r}`
+ }
+ else if(res>=50 && res <70){
+    let r=data[2].satisfied;
+img.innerHTML=`${r}`
+ }
+ else if(res>=70 && res< 80){
+    let r=data[3].good;
+img.innerHTML=`${r}`
+ }
+ else if(res>=80 && res<90){
+    let r=data[4].exelent;
+img.innerHTML=`${r}`
+ }
+ else{
+    let r=data[4].exelent;
+img.innerHTML=`${r}`
+ }
+}
+window.addEventListener('load',resultCheck(result.value))
+</script>
+
+</body>
+</html>

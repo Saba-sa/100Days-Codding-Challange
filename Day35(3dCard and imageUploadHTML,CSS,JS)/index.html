@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="flip">
+        <h1>Flip</h1>
+        <p>Hover over the images so the image will flip and text will be shown</p>
+        <div class="container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="front-face">
+                        <img src="./images/pic.webp">
+                    </div>
+                    <div class="back-face">
+            <h2>Saba</h2>
+            <p>I'm a web developer</p>
+            <div class="social-media">
+                <!-- add icons -->
+                <img src="./images/facebook.svg"width=20px>
+                <img src="./images/instagram.svg"width=20px>
+                <img src="./images/whatsapp.svg"width=20px>
+            </div>
+            <a href="#" class="btn">Resume</a>
+                    </div>
+                </div>
+            </div>
+            </div>           
+    </section>
+    <section class="upload">
+        <h1>Upload</h1>
+        <p>Image will be uploaded and wil be shown</p>
+        <div class="container" id="imgBox">
+            <div id="prevtext"></div>
+           <textarea  id="textBox" placeholder="Add caption:"></textarea> 
+        <input type="file" accept="image/*" name="image" id="file" style="display:none;" onchange="loadFile(event)">
+    <label for="file"><img src="./images/Spotify.svg" alt="upload icon" class="upload_Icon" ></label>    
+    <p class="crose" onclick="reset()">➕</p>
+    </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

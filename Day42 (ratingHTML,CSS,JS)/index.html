@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Site</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            text-align: center;
+            padding: 20px 40px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .star {
+            border: 3px solid #1e3050;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            background: transparent;
+            margin: 0 5px;
+            transition: background 0.3s ease;
+        }
+
+        .star:hover,
+        .star.active {
+            background: #f39c12;
+        }
+
+        img {
+            width: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="" alt="">
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+    <script>
+        const defaultRating = 4;
+
+        let img = document.querySelector('img');
+        let obj = [
+        { emoji: './face-sad-cry-regular.svg' },
+            { emoji: './face-meh-regular.svg' },
+            { emoji: './face-rolling-eyes-regular.svg' },
+            { emoji: './face-surprise-regular.svg' },
+            { emoji: './face-smile-beam-regular.svg' },
+        ];
+
+        let emojis = document.querySelectorAll('.star');
+        emojis.forEach((emoji, index) => {
+            emoji.addEventListener('click', () => {
+                emojis.forEach(star => star.classList.remove('active'));
+                let rating = index + 1; 
+                for (let i = 0; i < rating; i++) {
+                    emojis[i].classList.add('active');
+                }
+                img.setAttribute('src', obj[index].emoji);
+            });
+        });
+
+        emojis[defaultRating - 1].click();
+    </script>
+</body>
+</html>

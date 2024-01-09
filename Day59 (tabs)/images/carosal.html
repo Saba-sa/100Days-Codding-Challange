@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carosal.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="slide-1 slider">
+            <div class="slider-img">
+                <img src="./bg1.jpg" alt="slider image">
+            </div>
+            <div class="caption">
+                text
+            </div>
+        </div>
+        <div class="slide-2 slider">
+            <div class="slider-img">
+                <img src="./bg2.jpg" alt="slider image">
+            </div>
+            <div class="caption">
+                text
+            </div>
+        </div>
+        <div class="slide-3 slider">
+            <div class="slider-img">
+                <img src="./bg3.jpg" alt="slider image">
+            </div>
+            <div class="caption">
+                text
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="left" onclick="plus(1)">&gt;</div>
+            <div class="right" onclick="plus(-1)">&lt;</div>
+        </div>
+    </div>
+    <div class="carosal-dots">
+        <div class="dot" onclick="showSlide(1)"></div>
+        <div class="dot" onclick="showSlide(2)"></div>
+        <div class="dot" onclick="showSlide(3)"></div>
+    </div>
+    <script src="carosal.js"></script>
+</body>
+</html>

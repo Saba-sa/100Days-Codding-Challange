@@ -1,0 +1,322 @@
+/* <!-- ++++++++++++++++++hero section++++++++++++++++ --> */
+.hero{
+    overflow: hidden;
+    position: relative;
+}
+.hero_navigation{
+padding: 1.6vw;
+justify-content: space-between;
+}
+.hero_navigation_nav{
+    justify-content: space-between;
+}
+.hero_navigation_logo p{
+color: var(--hero3-1);
+}
+.hero_navigation_nav ul{
+    list-style: none;
+}
+.hero_navigation_nav ul li{
+    margin-right: 3vw;
+}
+.hero_navigation_nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--text-black);
+}
+.hero_navigation .btn{
+        padding: 10px 20px;
+        border-radius: 1vw;
+        font-size: 16px;
+}
+.purpose-flex{
+    display: flex;
+height: 100%;
+}
+ .hero_text{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-30%,-50%);
+    z-index: 2; 
+order: 2;
+}
+.hero_image{
+    width: 40%;
+    order: 1;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translate(-0%,-20%);
+} 
+.hero_image img{
+    width: 100%;
+}
+/* <!-- ++++++++++++++++++work overview section++++++++++++++++ --> */
+.work{
+    padding-bottom: 10px;
+    height: 100vh;
+    position: relative;
+    top: 0;
+}
+.work .grid-3{
+    padding: 3vw;
+}
+.work-grid-temp{
+    padding: 3vw;
+    padding-top: 0;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.281),
+    -5px 20px 10px rgba(0, 0, 0, 0.281);
+    position: relative;
+z-index: 5;
+padding-bottom: 4vw;
+background: var(--hero1);
+}
+.box img{
+width: 100%;
+}
+.work-box1 .text{
+    margin-top: 6vw;
+}
+.work .btn{
+    padding: 15px 25px;
+    display: block;
+    margin:auto;
+    font-size: 18px;
+}
+/* <!-- ++++++++++++++++++plan and pricing section++++++++++++++++ --> */
+.pricing{
+    height: 140vh;
+    background-color: var(--hero3);
+    top: -30px;
+    position: relative;
+    z-index: 3;
+}
+.blue-full{
+    background-color: var(--hero3);
+    height: 100%;
+width: 100%;
+position: absolute;
+z-index: 1;
+}
+.pricing_text{
+position: absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%,-10%);
+text-align: center;
+}
+.pricing_text .ruler{
+    width: 60%;
+    background: var(--hero3-1);
+    border: none;
+    border-radius: 0;
+}
+.grid2backtoback{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 85px;
+}
+.grid2backtoback .box{
+padding: 20px;
+    z-index: 2;
+    font-size: 25px;
+    background: var(--white);
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452),
+            -5px -5px 10px rgba(0, 0, 0, 0.356);
+transition: z-index 0.3s,transform 0.6s;
+line-height: 25px;
+}
+.grid2backtoback .box p .blue_small{
+    font-size: 1vw;
+}
+.grid2backtoback .pricing_box1:hover,
+.grid2backtoback .pricing_box3:hover{
+z-index: 4;
+transform: scale(1.1);
+}
+.grid2backtoback .box img{
+margin-top: -90px;
+width: 70%;
+}
+.grid2backtoback .pricing_box2{
+    width: 25rem;
+    z-index: 3;
+}
+.grid2backtoback .pricing_box2 img{
+    width: 110%;
+}
+.grid2backtoback  .btn{
+    margin-top: 1.2vw;
+    padding: 10px 20px;
+}
+/* <!-- ++++++++++++++++++last section++++++++++++++++ --> */
+.last{
+    background:var(--hero2);
+    height: 90vh;
+        position: relative;
+        top: -42px;
+    
+}
+.last img{
+    transform: rotateY(190deg);
+    position: absolute;
+    left: 11%;
+    z-index: 3;
+    width: 25%;
+}
+.last .last_text{
+    padding: 3rem;
+    border-radius: 2rem;
+    background: var(--hero1);
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: left;
+justify-content: center;    
+    flex-direction: column;
+    line-height: 30px;
+}
+.last .last_text .btn{
+    align-self:flex-start;
+padding: 0.8vw 2.3vw;
+}
+/* <!-- ++++++++++++++++++footer section++++++++++++++++ --> */
+footer{
+color: black;
+}
+footer .flex{
+    justify-content: space-between;
+
+}
+footer .flex .footer_text{
+    width: 30%;
+    justify-content: space-between;
+}
+.footer_icons{
+    justify-content: space-between;
+    width: 10%;
+}
+.footer_icons img{
+    width: 20px;
+    color: red;
+    cursor: pointer;
+}
+.d-none{
+    display: none;
+}
+@media (max-width:1124px) {
+    .blue{
+        font-size: 35px;
+    }
+    .blue_small{
+        font-size: 30px;
+    }
+  .last img{
+    width: 30%;
+    left: 0;
+}
+    .last .last_text{
+        width: 60%;
+    }
+}
+
+@media (max-width:768px) {
+    .fa-solid.d-none{
+        display: block;
+    }
+    .hero_navigation_nav{
+        flex-direction: column;
+        position: absolute;
+        top: 10%;
+        width:90%;
+        height: 0;
+        overflow: hidden;
+    }
+    .hero_navigation_nav ul.d-show{
+        flex-direction: column;
+    }
+    .hero_image {
+        width: 62%;
+        left: 0%;
+    }
+    .blue{
+        font-size: 30px;
+    }
+    .blue_small{
+        font-size: 25px;
+    }
+    .pricing{
+        top: 25rem;
+        height: 300vh;
+    }
+    .grid-3 {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid2backtoback{
+        flex-direction: column;
+    }
+.grid2backtoback .box{
+    margin-bottom: 100px;
+}  
+.last{
+    top: 400px;
+}
+.last img{
+    width: 40%;
+    left: -52px;
+}
+}
+@media (max-width:670px) {
+    .last .last_text{
+        width: 80%;
+    }
+    .last{
+        top: 400px;
+    }
+    .last img{
+        width: 40%;
+        left: -92px;
+        top: 40px;
+    }
+    }
+@media (max-width:500px) {
+    .hero_text{
+        background:rgba(253, 253, 245, 0.789);;
+        padding: 20px 40px;
+        left: 0;
+        transform: translate(0%,-50%);
+        width: 100%;
+    }
+    .hero_image{
+        width: 100%;
+    }
+        .blue{
+            font-size: 25px;
+        }
+        .blue_small{
+            font-size: 20px;
+        }
+        .grid-3{
+            grid-template-columns: 1fr;
+        }
+        .pricing{
+            top: 35rem;
+            height: 350vh;
+        }
+        .last{
+            top: 500px;
+        }
+        .last img{
+            width: 50%;
+            left: -92px;
+            top: 130px;
+        }
+    }

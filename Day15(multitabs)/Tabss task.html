@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      section{
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow: hidden;
+      }
+      .image{
+        width: 40%;
+      }
+      img{
+        width: 100%;
+      }
+      #tabs {
+        width: 50%;
+box-shadow: 0px 0px 10px grey;
+      }
+
+.tab-list {
+  background-color: lightgray;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-list li {
+  width: 30%;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab-list li.active {
+  background-color: white;
+}
+
+.tab-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 0 5px 5px 5px;
+}
+@media (max-width:1200px){
+.image{
+  width: 40%;
+}
+section{
+  width: 90%;
+}
+}
+@media (max-width:980px){
+  section{
+    flex-direction: column;
+    width: 100%;
+}
+}
+@media (max-width:555px){
+.image{
+  width: 90%;
+}
+  #tabs{
+    width: 90%;
+}
+}
+    </style>
+</head>
+<body>
+  <section class="tabs-section">
+    <div class="image">
+      <img src="" class="dynamicImage">
+    </div>
+    <div id="tabs">
+      <ul class="tab-list"></ul>
+      <div class="tab-content"></div>
+      
+    </div>
+  </section>
+<script>
+    const tabsData = [
+  { title: 'History', content: '<h1>History</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ullam natus alias vel molestiae corporis quam placeat aut quos sequi?</p>' ,img:'./images/bg2.jpg'},
+  { title: 'Vision', content: '<h1>Vision</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Nesciunt ullam natus alias vel molestiae corporis quam placeat aut quos sequi?</p>',img:'./images/bg6.jpg' },
+  { title: 'Mission', content: '<h1>Mission</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ullam natus alias vel molestiae corporis quam placeat aut quos sequi?</p>',img:'./images/bg9.jpg' },
+];
+
+
+function createTabs() {
+  const tabList = document.querySelector('.tab-list');
+  const tabContent = document.querySelector('.tab-content');
+  const img = document.querySelector('.dynamicImage');
+
+  tabsData.forEach((tab, index) => {
+    // Create tab element
+    const tabItem = document.createElement('li');
+    tabItem.innerHTML = tab.title;
+    
+    tabItem.addEventListener('click', () => {
+      // Remove active class from all tabs
+      const allTabs = document.querySelectorAll('.tab-list li');
+      allTabs.forEach((tab) => {
+        tab.classList.remove('active');
+      }); 
+      // Add active class to clicked tab
+      tabItem.classList.add('active');
+      
+      //Adding image
+      img.src=tab.img;
+      // Display content of selected tab
+      tabContent.innerHTML = tab.content;
+    });
+
+    //To set the first tab as active by default
+    if (index === 0) {
+      tabItem.classList.add('active');
+      tabContent.innerHTML = tab.content;
+      img.src=tab.img;
+    }
+
+    // Append tab to the tab list
+    tabList.appendChild(tabItem);
+  });
+}
+// Call the createTabs function to initialize the tabs
+createTabs();
+
+</script>      
+</body>
+</html>

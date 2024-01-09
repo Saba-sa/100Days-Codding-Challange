@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="textType.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>I'm <span class="autoType"></span></h1>
+    </div>
+    <script>
+        let arr = ["web developer", "designer"];
+        let span = document.querySelector(".autoType");
+        let index = 0;
+        let delay = 3000; 
+
+        function updateText() {
+            span.textContent = arr[index];
+            index = (index + 1) % arr.length;
+        }
+
+        function autoType() {
+            setInterval(() => {
+                updateText();
+            }, delay);
+        }
+
+        autoType();
+    </script>
+</body>
+</html>

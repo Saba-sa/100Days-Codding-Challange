@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./images/Logo/LogoWhite.svg" type="image/x-icon">
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="./bg.avif" class="resturant">
+        <div class="door doorInside"></div>
+  <div class="door doorOutside"></div>
+  <div class="result">
+    <h3>Total tables:11</h3>
+    <h3 class="reserved"></h3>
+    <h3 class="userReservation"></h3>
+    <p class="none">Sorry All seats are reserved</p>
+  </div>
+  <div class="paint">
+    <img src="./bgofresturant.avif" >
+  </div>
+  <div class="tab">
+    <div class="tables tables_1 blue AllReadyReserve">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_2">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_3">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_4 blue AllReadyReserve">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_5">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_6">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_7">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_8">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_9">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_10">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="tables tables_11">
+      <div class="chair chair_1"></div>
+      <div class="chair chair_2"></div>
+    <div class="table"></div>
+    <div class="chair chair_3"></div>
+    <div class="chair chair_4"></div>
+  </div>
+  <div class="waiter waiter_1">
+    <i class="fa-solid fa-child-reaching"></i>
+  </div>
+  <div class="waiter waiter_2">
+    <i class="fa-solid fa-child-reaching"></i>
+  </div>
+  </div>
+    </div>
+    <script>
+        let door=document.querySelector('.doorOutside')
+door.addEventListener('click',()=>{
+    door.style.animation='none'
+})
+let count=0;
+let Reservedcount=2;
+let tables=document.querySelectorAll('.tables')
+let result=document.querySelector('.result')
+let reservation=document.querySelector('.reserved')
+let userReservation=document.querySelector('.userReservation')
+reservation.innerText=`Reserved tables :${Reservedcount}`
+tables.forEach((table)=>{
+    table.addEventListener('click',()=>{
+        table.classList.toggle('blue')
+        if(table.classList.contains('blue')){
+            count++;
+            Reservedcount++;
+            if(Reservedcount===11){
+              document.querySelector('p').classList.remove('none')
+            }
+        }
+        else if(count!==0&&Reservedcount!==0){
+            count--;
+            Reservedcount--;
+        }
+        reservation.innerText=`Reserved tables :${Reservedcount}`
+        userReservation.innerText=`You reserved :${count} tables`
+    })
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Counter.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ol>
+        <li>Counter with vanila Js</li>
+      </ol>
+    </nav>
+    <div class="con">
+      <div class="container">
+        <div class="box">
+          <h1>Counter</h1>
+          <h3>0</h3>
+          <select name="LastLimit" id="LastLimit" onchange="select()">
+            <option value="NaN" selected disabled>Upper limit</option>
+            <option value="3" onselect="selected()">3</option>
+            <option value="5" onselect="selected()">5</option>
+            <option value="7" onselect="selected()">7</option>
+            <option value="9" onselect="selected()">9</option>
+            <option value="11" onselect="selected()">11</option>
+          </select>
+          <button class="Decrease">Decrement</button>
+          <button class="Increse">Increment</button>
+          <button class="Reset">Reset</button>
+        </div>
+      </div>
+      <div class="overlay">
+        <div class="popUp">
+          <h1 class="popUp-h1"></h1>
+          <button onclick="ok()">ok</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let counter = 0;
+      let h3 = document.querySelector("h3");
+      let sel = document.querySelector("select");
+      let lastLimit = 2;
+      let gameOver = false;
+      function select() {
+        lastLimit = parseInt(sel.value);
+        return lastLimit;
+      }
+
+      let btn = document.querySelectorAll("button");
+      let popUp = document.querySelector(".popUp");
+      let overlay = document.querySelector(".overlay");
+      let popUpH1 = document.querySelector(".popUp-h1");
+      btn.forEach((b) => {
+        b.addEventListener("click", () => {
+          if (b.classList.contains("Decrease")) {
+            if (counter != 0) {
+              counter--;
+            } else {
+              overlay.classList.add("showOverlay");
+              popUpH1.innerHTML = `counter is already:${counter}`;
+              popUp.style.transform = "scale(1)";
+            }
+          } else if (b.classList.contains("Increse")) {
+              if (counter < lastLimit) {
+              counter++;
+            } else {
+              sel.value = "";
+              popUpH1.innerHTML = `you reached at the last limit:${lastLimit}`;
+                overlay.classList.add("showOverlay");
+              popUp.style.transform = "scale(1)";
+            }
+          } else {
+            counter = 0;
+          }
+          h3.textContent = counter;
+        });
+      });
+      function ok() {
+        popUp.style.transform = "scale(0)";
+        overlay.classList.remove("showOverlay");
+      }
+    </script>
+    <noscript>your Browser doesn't support javascript :(</noscript>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+<div class="container">
+    <a href="index.html" class="brand">APIDURA</a>
+    <div class="menu">
+    <a href="index.html" class="brand">APIDURA</a>
+    <div>
+    <a href="#" class="grand-grand">Innovation
+        <ul>
+            <li>first</li>
+            <li>Secound</li>
+            <li>Third</li>
+            <li>Fourth</li>
+        </ul>
+    </a>
+    <a href="#" class="grand-grand">Inspiration
+        <ul>
+            <li>first</li>
+            <li class="grand-parents">Secound
+                <ul class="parent">
+                    <li>secound first</li>
+                    <li>secound Secound</li>
+                    <li>secound Third
+                        <ul class="childrens">
+                            <li>Secound-secound-first</li>
+                            <li>Secound-secound-Secound</li>
+                            <li>Secound-secound-Third</li>
+                            <li>Secound-secound-Fourth</li>
+                        </ul>
+                    </li>
+                    <li>secound Fourth</li>
+                </ul>
+            </li>
+            <li>Third</li>
+            <li>Fourth</li>
+        </ul>
+    </a>
+    <a href="#">Shop</a>
+    </div>
+    <a href="#" class="btn">Sign Up</a>
+</div>    
+<button class="menu-btn">
+    <i class="fas fa-bars"></i>
+</button>
+</div>
+</nav>
+<main>
+    <header>
+        <img src="./Assest/hero1.jpg" alt="">
+    <div class="text">
+        <h3>LEADING <span class="fade">THE</span> EVOLUTION <span class="fade">IN</span></h3>
+   <h1>ULTRALIGHT</h1>
+   <h3>CYCLINE</h3>
+   <button class="btn">downeard arrow</button>
+    </div>    
+    </header>
+<div class="card">
+    <img src="./Assest/card1.jpg" alt="">
+<div class="text">
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odit?</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim in tenetur quidem aspernatur deserunt laborum doloremque voluptas at fuga, eligendi eos omnis assumenda minima hic temporibus. Quia nam cumque expedita consequatur natus laboriosam impedit fugit aspernatur, tenetur ad? Doloribus ipsum minus atque unde, error veritatis nostrum, dolores, sapiente ollitia od soluta molestiae asperiores maiores ipsum fuga voluptatem sed quidem cumque laudantium, laboriosam exercitationem iusto hic fugit, esse quasi debitis!</p>
+    <a href="#" class="btn btn-secondary">Try it for free</a>
+</div>
+</div>
+<div class="card">
+    <img src="./Assest/card2.jpg" alt="">
+    <div class="text">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odit?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim in tenetur quidem aspernatur deserunt laborum doloremque voluptas at fuga, eligendi eos omnis assumenda minima hic temporibus. Quia nam cumque expedita consequatur natus laboriosam impedit fugit aspernatur, tenetur ad? Doloribus ipsum minus atque unde, error veritatis nostrum, dolores, sapiente ollitia od soluta molestiae asperiores maiores ipsum fuga voluptatem sed quidem cumque laudantium, laboriosam exercitationem iusto hic fugit, esse quasi debitis!</p>
+        <a href="#" class="btn btn-secondary">Join the community</a>
+    </div>
+</div>
+<div class="card">
+    <img src="./Assest/card3.webp" alt="">
+    <div class="text">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odit?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim in tenetur quidem aspernatur deserunt laborum doloremque voluptas at fuga, eligendi eos omnis assumenda minima hic temporibus. Quia nam cumque expedita consequatur natus laboriosam impedit fugit aspernatur, tenetur ad? Doloribus ipsum minus atque unde, error veritatis nostrum, dolores, sapiente ollitia od soluta molestiae asperiores maiores ipsum fuga voluptatem sed quidem cumque laudantium, laboriosam exercitationem iusto hic fugit, esse quasi debitis!</p>
+        <a href="#" class="btn btn-secondary">Start now</a>
+    </div>
+</div>
+<div class="card">
+    <img src="./Assest/card4.jpg" alt="">
+    <div class="text">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odit?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim in tenetur quidem aspernatur deserunt laborum doloremque voluptas at fuga, eligendi eos omnis assumenda minima hic temporibus. Quia nam cumque expedita consequatur natus laboriosam impedit fugit aspernatur, tenetur ad? Doloribus ipsum minus atque unde, error veritatis nostrum, dolores, sapiente ollitia od soluta molestiae asperiores maiores ipsum fuga voluptatem sed quidem cumque laudantium, laboriosam exercitationem iusto hic fugit, esse quasi debitis!</p>
+        <a href="#" class="btn btn-secondary">Join the community</a>
+    </div>
+</div>
+</main>
+<footer>
+    <p>&copy; All rights reserved.Lorem ispum dolor</p>
+</footer>
+<script>
+    //responsive navbar menu open/close
+//select menu button
+const menuBtn=document.querySelector(".menu-btn");
+//select menu
+const menu=document.querySelector(".menu")
+//Add click event
+menuBtn.addEventListener('click',()=>{
+    //toggle between X and menu icon in the button
+menuBtn.firstElementChild.classList.toggle('fa-times')
+menu.classList.toggle("menu-open");
+})
+
+let grandGrand=document.querySelectorAll('.grand-grand');
+let grandParents=document.querySelectorAll('.grand-parents');
+let Parent=document.querySelectorAll('.parent');
+let Childrens=document.querySelectorAll('.childrens');
+document.body.addEventListener('mouseover',()=>{
+    grandGrand.forEach((i)=>{
+        i.firstElementChild.style.display="none";
+    })
+})
+grandGrand.forEach((i)=>{
+    i.addEventListener('mouseover',(e)=>{
+        e.target.firstElementChild.style.display="inline";
+    })
+})
+</script>
+</body>
+</html>

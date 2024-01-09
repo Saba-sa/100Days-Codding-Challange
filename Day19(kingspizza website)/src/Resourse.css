@@ -1,0 +1,41 @@
+:root{
+ --orange:rgb(212, 154, 45);  
+ --black:rgb(36, 36, 36); 
+ --gray:rgb(78, 78, 78);
+ --white:rgb(241, 240, 240);
+ /* font sizes */
+ --fs-largest:10vw;
+ --fs-large:5vw;
+ --fs-med:4vw;
+ --fs-medium:3vw;
+ --fs-small:2vw;
+ --fs-smaller:1.3vw;
+ --fs-smallest:1vw;
+
+}
+p{
+    background: transparent;
+}
+section{
+    min-width: 100%;
+    height: 100vh;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns:50% 50%;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

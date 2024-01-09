@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.max{
+width: 90%;
+margin: auto;
+}
+.btn{
+    padding: 10px 30px;
+background: #000;
+color: whitesmoke;
+}

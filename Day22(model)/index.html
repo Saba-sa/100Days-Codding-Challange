@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./clock.png" type="image/x-icon">
+    <title>Document</title>
+<style>
+body{
+  background: url('./annie-spratt-wuc-KEIBrdE-unsplash.jpg') no-repeat center;  
+background-size: cover;
+/* backdrop-filter: blur(10px); */
+}
+.banner{
+position: absolute;
+top: 50%;
+left: 50%;
+border: 2px solid;
+padding: 50px;
+background: white;
+border-radius: 10px;
+border: none;
+transform: translate(-50%,-50%);
+}
+.banner h1{
+    font-size: 2.3rem;
+    color: rgb(5, 5, 44);
+    text-transform: uppercase;
+}
+.banner button{
+    width: 80%;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    background: rgb(73, 151, 177);
+    color: antiquewhite;
+    font-size: 1.3rem;
+    border: none;
+ cursor: pointer;
+    border-radius: 20px;
+}
+.banner button:hover{
+    background: rgb(44, 144, 177);   
+}
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+width: 100%;
+height: 100%;
+background:  rgba(44, 144, 177, 0.342);  
+display: grid;
+place-items: center;
+visibility: hidden;
+z-index: -10;
+}
+.modal-container{
+padding: 50px;
+background: white;
+border-radius: 10px;
+border: none;
+position: relative;
+}
+.modal-container h3{
+    font-size: 2rem;
+        color: rgb(5, 5, 44);
+        text-transform: uppercase;
+    }
+    .modal-container button{
+        width: 30px;
+    padding: 0px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgb(73, 151, 177);
+    color: antiquewhite;
+    font-size: 1.3rem;
+    border-radius: 0px;
+    border: none;
+    font-weight: 900;
+ cursor: pointer;
+    }
+.open-modal{
+    visibility: visible;
+    z-index: 10;
+}
+</style>
+</head>
+<body>
+    <header class="hero">
+<div class="banner">
+    <h1>modal projects</h1>
+<button class="btn modal-btn">
+    open modal
+</button>
+</div>
+
+    </header>
+<div class="modal-overlay">
+    <div class="modal-container">
+<h3>modal content</h3>
+<button class="close">-</button>    
+</div>
+</div>
+<script>
+let close=document.querySelector('.close')
+let mOverlay=document.querySelector('.modal-overlay')
+let btn=document.querySelector('.btn')
+btn.addEventListener('click',()=>{
+mOverlay.classList.add('open-modal')
+})
+close.addEventListener('click',()=>{
+    mOverlay.classList.remove('open-modal')
+
+})
+</script>
+</body>
+</html>
