@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+  padding: 20px 40px;
+  background: #353131;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+color: white;
+}
+
+.note{
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #000;
+padding: 20px; */
+border: 1px solid #000;
+}
+.Notes{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+width: 80%;
+margin: 40px auto;
+}
