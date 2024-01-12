@@ -1,0 +1,64 @@
+
+.Container{
+  width: 80%;
+  margin: auto;
+padding: 20px 60px;
+background: rgba(128, 128, 128, 0.185);
+border-radius: 20px;
+}
+.center{
+  text-align: center;
+}
+
+.Adding{
+  padding:40px 0;
+  display: flex;
+align-items: center;
+justify-content: center;
+width: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background: rgba(233, 232, 232, 0.658);
+border-radius: 20px;
+height: 30vh;
+}
+.Adding input{
+  width: 50%;
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+.Adding input:focus{
+  outline: none;
+}
+.Adding button{
+  width: 30%;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+.bg-red-btn{
+  width: 60%;
+}
+.lineThrought{
+  text-decoration: line-through;
+  color: grey;
+}
+p{
+  color:black;
+  cursor: pointer;
+}
+.center .flex.flex-center{
+  justify-content: space-evenly;
+  width: 80%;
+ }
+ .bg-red{
+  background: red;
+ }
+ .nothing{
+  background: initial;
+ }
+ .Adding .w80{
+width: 100%;
+ }

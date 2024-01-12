@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a button{
+    text-decoration: none;
+    color: beige;
+}
+.app{
+    display: flex;
+
+flex-direction: column;
+}
+.header{
+background: #000;
+color: #7e098d;
+padding: 1.5vw;
+}
+.nav form{
+width: 100%;
+background: #7e098d;
+text-align: center;
+padding: 20px;
+padding-bottom: 0px;
+}
+.nav form input{
+width: 50%;
+font-size: 20px;
+height: auto;
+padding: 0.3vw;
+margin: auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav .nav_links{
+    background: #7e098d;
+}
+.nav form label{
+    position: relative;
+    top: -999999px;
+}
+.nav ul{
+width: 30%;
+    display: flex;
+    list-style: none;
+    padding:15px;
+    padding-top:0px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav ul li a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.2vw;
+}
+.nav ul li a.active{
+    color: #000;
+    position: relative;
+}
+.nav ul li a.active::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    background: #000;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-20%);
+    border-radius: 50%;
+}
+.home{
+    flex-grow: 1;
+}
+footer{
+    background: #7e098d;
+    padding: 1.2vw;
+    color: white;
+    /* position: fixed;
+    bottom: 0;
+    width: 100%; */
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+width: 50%;
+margin: 2vw auto;
+border-bottom: 1px solid #000;
+}
+.post h1{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 3vw;
+}
+.post a{
+    text-decoration: none;
+}
+.post h6{
+    color: grey;
+}
+.post p{
+    font-size: 2vw;
+}
+.newPost{
+    width: 80%;
+    margin: 3vw auto;
+    height: auto;
+}
+.newPost form{
+    display: flex;
+    flex-direction: column;
+width: 50%; 
+margin: auto;   
+}
+.newPost form label{
+    margin-bottom: 1.2vw;
+    font-size: 1.8vw;
+}
+.newPost form input{
+    border: 1px solid #000;
+height: 3vw;
+font-size: 1.8vw;
+padding: 5px;
+}
+.newPost form textarea{
+    height: 20vw;
+    font-size: 1.8vw;
+    padding: 5px;
+}
+.newPost form button{
+    background: #7e098d;
+margin-top: 20px;
+padding: 10px;
+color: wheat;
+font-size: 2vw;
+}
+.PostPage{
+margin-top: 2vw;
+}
+.PostPage button{
+    width: 50%;
+margin-bottom: 2vw;
+font-size: 1.6vw;
+background: #7e098d;
+color: whitesmoke;
+padding: 1.3vw;
+border-radius: 20px;
+border: none;
+box-shadow: 5px 5px 5px grey;
+}
+.about{
+    width: 90%;
+    margin: 2vw auto;
+}
+.about h1{
+    margin-bottom: 1.3vw;
+}
+.about,.post,.home,.newPost,.missing{
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: auto;
+}
