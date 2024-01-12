@@ -1,0 +1,21 @@
+.testimonial{
+    text-align: center;
+    background: var(--color-bg-variant);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.testimonial img{
+    width: 15%;
+margin: 0.6rem auto;
+}
+
+.container.testimonial_container{
+    width: 60%;
+    padding-bottom: 3rem;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+border: 5px solid var(--color-primary);
+}
+.swiper-pagination-bullet-active{
+    background: var(--color-primary);
+}
