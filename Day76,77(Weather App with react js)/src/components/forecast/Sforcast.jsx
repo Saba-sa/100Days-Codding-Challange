@@ -10,9 +10,9 @@ const Sforcast = ({ item, groupedByDate }) => {
       className="flex justify-between items-center mt-6 cursor-pointer"
       onClick={() => {
         setcurrentWether({ ...currentWether, ...item });
-        Object.keys(groupedByDate).map((i) => {
+        Object.keys(groupedByDate).forEach((i) => {
           if (day === i) {
-            return setwetherForcastHourly(groupedByDate[i]);
+            setwetherForcastHourly(groupedByDate[i]);
           }
         });
       }}

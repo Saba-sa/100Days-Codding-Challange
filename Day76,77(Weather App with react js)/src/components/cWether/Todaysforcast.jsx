@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppStore } from "../../hooks/Context.jsx";
-import DumpSaba from "../SingleForcast/SingleForcast.jsx";
+import SingleForcast from "../SingleForcast/SingleForcast.jsx";
 
 const Todaysforcast = () => {
   const { wetherForcastHourly } = useAppStore();
@@ -9,7 +9,7 @@ const Todaysforcast = () => {
     const tempData = todaysforcast.map((item) => {
       const { dt, dt_txt, weather, main } = item;
       const [, time] = dt_txt.split(" ");
-      return <DumpSaba key={dt} time={time} weather={weather} main={main} />;
+      return <SingleForcast key={dt} time={time} weather={weather} main={main} />;
     });
     return (
       <>

@@ -15,15 +15,16 @@ const Forcast = () => {
     ];
 
     const groupedByDate = {};
+
+    console.log("itemitemitemitem", wetherForcast);
     wetherForcast.list.forEach((item) => {
-      const [forecastDate, time] = item.dt_txt.split(" ");
-      const date = new Date(forecastDate);
+      const date = new Date(item.dt_txt);
       const day = weekday[date.getDay()];
+      console.log(day);
 
       if (!groupedByDate[day]) {
         groupedByDate[day] = [];
       }
-
       groupedByDate[day].push(item);
     });
     const renderForecast = Object.keys(groupedByDate).map((day) => {
