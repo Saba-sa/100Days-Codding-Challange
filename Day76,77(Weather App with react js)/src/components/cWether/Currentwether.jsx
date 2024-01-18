@@ -1,6 +1,6 @@
 import React from "react";
 import Todayforcast from "./Todaysforcast.jsx";
-import Wetherdetail from "./Wetherdetail.js";
+import Wetherdetail from "./Wetherdetail.jsx";
 import ImageToShow from "./ImageTobeShown.jsx";
 import { useAppStore } from "../../hooks/Context.jsx";
 const Currentwether = () => {
@@ -15,7 +15,6 @@ const Currentwether = () => {
             <div>
               <p className="font-bold mt-2">{city}</p>
               <p className="text-gray-500">{weather[0].description}</p>
-              {/* <p className='text-gray-500'>{rain.1h}</p> */}
             </div>
             <p className="mt-12 text-4xl">{Math.ceil(main.temp)}°C</p>
           </div>

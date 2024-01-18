@@ -1,12 +1,8 @@
 import React from "react";
 import { useAppStore } from "../../hooks/Context";
+import Sforcast from "./Sforcast";
 const Forcast = () => {
-  const {
-    wetherForcast,
-    currentWether,
-    setcurrentWether,
-    setwetherForcastHourly,
-  } = useAppStore();
+  const { wetherForcast } = useAppStore();
   if (wetherForcast !== null) {
     const weekday = [
       "Sunday",
@@ -18,7 +14,6 @@ const Forcast = () => {
       "Saturday",
     ];
 
-    // Group items by date
     const groupedByDate = {};
     wetherForcast.list.forEach((item) => {
       const [forecastDate, time] = item.dt_txt.split(" ");
@@ -36,28 +31,10 @@ const Forcast = () => {
       const firstItem = { ...dailyForecast[0], day: day };
       return firstItem;
     });
+
     let display = renderForecast.map((item) => {
-      const { dt, weather, day } = item;
       return (
-        <div
-          key={dt}
-          className="flex justify-between items-center mt-6 cursor-pointer"
-          onClick={() => {
-            setcurrentWether({ ...currentWether, ...item });
-            Object.keys(groupedByDate).map((i) => {
-              if (day === i) {
-                return setwetherForcastHourly(groupedByDate[i]);
-              }
-            });
-          }}
-        >
-          <p>{day}</p>
-          <img
-            src={`http://openweathermap.org/img/wn/${weather[0].icon}.png`}
-            alt={weather[0].description}
-          />
-          <p>{weather[0].description}</p>
-        </div>
+        <Sforcast key={item.dt} item={item} groupedByDate={groupedByDate} />
       );
     });
 

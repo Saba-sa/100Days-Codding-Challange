@@ -13,7 +13,6 @@ const Todaysforcast = () => {
     });
     return (
       <>
-        ={" "}
         <div className="text-white flex justify-evenly p-8 flex-col bg-slate-700 rounded-2xl h-60 mb-4">
           <p className="mb-2 text-xl font-bold">Todaysforcast</p>
           <div className="flex items-center justify-evenly divide-x-2">
