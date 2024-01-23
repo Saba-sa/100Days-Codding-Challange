@@ -1,0 +1,11 @@
+.hero{
+    background: url(./images/girls/young-woman-wearing-unicorn-pajamas.jpg) no-repeat center;
+    background-position: top -20px left 0px;
+background-size: cover;
+}
+.proDetails{
+    padding: 0;
+}
+.fa-solid.d-none{
+    display: none !important;
+}

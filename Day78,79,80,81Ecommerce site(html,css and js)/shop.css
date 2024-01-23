@@ -1,0 +1,113 @@
+/* Hero section start */
+.hero{
+    background: url(./images/girls/cta-banner.jpg) no-repeat center;
+    background-size: cover;
+height: 50vh; 
+}
+.hero .row{
+    height: 100%;
+}
+.hero .row .col-2{
+padding-left: 80px;
+padding: 20px 0;
+}
+
+/* Hero section ends */
+/* pagination */
+.pagination{
+margin-bottom: 50px;
+text-align: center;
+width: 100%;
+}
+.pagination a{
+    padding: 1rem;
+    background: var(--majorColor3-1);
+    color: var(--majorColor1);
+    border: none;
+    margin: 0.3rem;
+    border-radius: 5px;
+    outline: 2px solid var(--majorColor3-1);
+    outline-offset: 2px;
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+/* single product detail */
+.proDetails {
+    padding: 120px 0;
+    padding-bottom: 50px;
+}
+.proDetails .row{
+    display: flex;
+width: 95%;
+align-items: center;
+justify-content: space-evenly;
+}
+.proDetails .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+}
+.proDetails .single-pro-image .small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.proDetails .single-pro-image .small-img-group .small-img-col{
+   flex-basis: 24%;
+   cursor: pointer;
+   box-shadow: 2px 2px 5px gray;
+   border-radius: 10%;
+   overflow: hidden;
+}
+.proDetails .single-pro-detail{
+    width: 50%;
+    text-align: justify;
+}
+.proDetails .single-pro-detail h4{
+padding: 30px 0 0px 0;
+font-size: 30px;
+}
+.proDetails .single-pro-detail h2{
+    font-size: 26px;
+}
+.proDetails .single-pro-detail select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    outline: none;
+    width: 30%;
+}
+.proDetails .single-pro-detail input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.proDetails .single-pro-detail input:focus{
+    outline: none;
+}
+
+.proDetails .single-pro-detail button{
+    padding: 14px 30px;
+    background: var(--majorColor1);
+    border:2px solid var(--majorColor3-1);
+    color: var(--majorColor3-1);
+    font-size: 16px;
+    cursor: pointer;
+}
+.proDetails .single-pro-detail p{
+    line-height: 30px;
+}
+/* featured products */
+.new_arival{
+    margin-bottom: 130px;
+}
+@media (max-width:915px) {
+    .proDetails .single-pro-image {
+        width: 100%;
+    margin-bottom: 30px;
+    }
+    .proDetails .single-pro-detail {
+        width: 100%;
+    padding: 20px;    }
+}
