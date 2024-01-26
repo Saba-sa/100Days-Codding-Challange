@@ -15,8 +15,8 @@ const Header = () => {
       <>
         <Mobnav height={height} resetHeight={resetHeight} />
         <header className=" w-full text-gray-700 bg-white border-t border-gray-100 shadow-sm body-font">
-          <div className="container flex flex-col flex-wrap items-center justify-between  p-2 mx-auto sm:flex-row lg:mx-auto lg:max-w-5xl lg:justify-between">
-            <nav className="flex flex-wrap items-center text-base lg:w-1/5 md:ml-0  lg:m-0">
+          <div className="container flex flex-col flex-wrap items-center justify-between  p-2 mx-auto sm:flex-row lg:mx-auto lg:max-w-5xl lg:justify-between md:max-w-4xl sm:max-w-8xl">
+            <nav className="flex flex-wrap items-center text-base lg:w-1/5 md:ml-0 md:w-1/5 md:max-w-1/2  lg:m-0 sm:max-w-44 ">
               <img src={logo} alt="logo of the companey" />
             </nav>
             <FaBars
