@@ -5,35 +5,12 @@ import Icon1 from "../../assets/svg/heroIcon1.svg";
 import Icon2 from "../../assets/svg/heroIcon2.svg";
 import Icon3 from "../../assets/svg/heroIcon3.svg";
 const Hero = () => {
-  // const data = [
-  //   {
-  //     id: 1,
-  //     text: "Excellence opérationnelle",
-  //     icon: Icon1,
-  //     positionX: 0,
-  //     positionY: 0,
-  //   },
-  //   {
-  //     id: 2,
-  //     text: "Expertise stratégique",
-  //     icon: Icon2,
-  //     positionX: 0,
-  //     positionY: 0,
-  //   },
-  //   {
-  //     id: 3,
-  //     text: "Résilience face aux défis du marché",
-  //     icon: Icon3,
-  //     positionX: 0,
-  //     positionY: 0,
-  //   },
-  // ];
   return (
     <div
-      className="bg-white relative   flex items-center   justify-center overflow-hidden "
+      className="bg-white relative   flex items-center   justify-center overflow-hidden"
       id="hero"
     >
-      <div className="flex flex-col items-center justify-between lg:flex-row py-8">
+      <div className="flex flex-col items-center justify-between lg:flex-row py-8 lg:max-w-7xl lg:w-full">
         <div className=" relative ">
           <div className="w-5/6 m-auto lg:max-w-2xl">
             <h2 className="text-4xl  leading-snug font-bold tracking-tight text-g1 sm:text-6xl sm:leading-snug mb-8">
