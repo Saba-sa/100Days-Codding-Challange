@@ -1,0 +1,8 @@
+.container {
+  border-radius: 10px;
+  border: 1px solid mediumseagreen;
+  background: whitesmoke;
+  width: 30%;
+  margin: 90px auto;
+  overflow: hidden;
+}
