@@ -1,0 +1,271 @@
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.book .book_page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: var(--pages-color);
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.profile_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile_page img {
+  max-width: 180px;
+  border-radius: 50%;
+  border: 0.25rem solid var(--main-color);
+  margin-bottom: 0.8rem;
+}
+h1 {
+  font-size: 2.7rem;
+  line-height: 1;
+}
+h3 {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
+p {
+  text-align: justify;
+}
+.profile_page p {
+  padding: 2rem;
+}
+.btn_box {
+  margin-top: 0.5rem;
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.5rem;
+  height: 3rem;
+  background: var(--main-color);
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  color: var(--white-color);
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: 0.5s;
+}
+.btn:hover {
+  color: var(--main-color);
+  background: var(--white-color);
+}
+
+.btn_box .btn:nth-child(2) {
+  width: 12rem;
+  background: transparent;
+  color: var(--main-color);
+}
+.btn_box .btn:nth-child(2):hover {
+  background: var(--main-color);
+  color: var(--white-color);
+}
+
+.book_page.page_right_1 {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 10px solid #bd1010;
+}
+.book_page.page_right_1 {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 10px solid #bd1010;
+}
+/* .book_page.page_right {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 10px solid #bd1010;
+} */
+.book_page.page_right_1 {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 10px solid #bd1010;
+}
+.book_page.page_right_2 {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 10px solid #8010bd;
+}
+.book_page .page_front,
+.book_page .page_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--pages-color);
+}
+.book_page .page_front {
+  transform: rotateY(0deg) translateZ(1px);
+  height: 100%;
+}
+.book_page .page_back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+.book_page.page_right_2 .page_back {
+  background: #000;
+}
+.book_page.page_right_1.turn {
+  transform: rotateY(-180deg);
+}
+.book_page.page_right_2.turn {
+  transform: rotateY(-180deg);
+}
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.number_page {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nextprev_btn {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 1.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--second-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.nextprev_btn:hover {
+  color: var(--main-color);
+}
+
+.nextprev_btn.back {
+  right: 90%;
+}
+
+.book_page.page_content {
+  border: none;
+}
+.book_page.page_content .page_front {
+  background: var(--pages-color);
+  padding: 0 1.5rem;
+}
+.book_page.page_content .page_front .front_page_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.book_page.page_content .page_front .front_page_content .content_food_imgs {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+.book_page.page_content .page_front .front_page_content .content_food_imgs img {
+  width: 100%;
+  gap: 20px;
+}
+.book_page.page_content .page_front .front_page_content .content_food_text {
+  width: 70%;
+  height: 80%;
+  padding: 2rem;
+}
+.book_page.page_content .page_front .front_page_content .imgs img {
+  width: 100%;
+}
+
+.book_page.page_content
+  .page_front
+  .front_page_content
+  .content_food_text
+  .contentDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+}
+.book_page.page_content
+  .page_front
+  .front_page_content
+  .content_food_text
+  .contentDetail
+  .contentDetail_No {
+  color: red;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: "Indie Flower", cursive;
+}
+.book_page.page_content
+  .page_front
+  .front_page_content
+  .content_food_text
+  .contentDetail
+  .contentDetail_title,
+.book_page.page_content
+  .page_front
+  .front_page_content
+  .content_food_text
+  .contentDetail
+  .contentDetail_pageNo {
+  font-size: 1.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.page_back .page_content .pageContent_text {
+  position: relative;
+}
+.page_back .page_content .pageContent_text .title {
+  position: absolute;
+  background: var(--main-color);
+  color: var(--white-color);
+  left: 50%;
+  transform: translate(-50%, -80%);
+  padding: 1rem 2rem;
+}
+.page_back .page_content .pageContent_text .detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+}
+.page_back .page_content .pageContent_text .detail .ingrediants {
+  width: 30%;
+}
+.page_back .page_content .pageContent_text .detail .cookingWay {
+  width: 65%;
+}
+.page_back .page_content .page_content_img {
+  height: 15rem;
+  overflow: hidden;
+}
+.page_back .page_content .page_content_img img {
+  width: 100%;
+}

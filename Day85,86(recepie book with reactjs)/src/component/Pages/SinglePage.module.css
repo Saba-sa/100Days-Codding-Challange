@@ -1,0 +1,104 @@
+.book_page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: var(--pages-color);
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.5rem;
+  height: 3rem;
+  background: var(--main-color);
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  color: var(--white-color);
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: 0.5s;
+}
+.btn:hover {
+  color: var(--main-color);
+  background: var(--white-color);
+}
+
+.btn_box .btn:nth-child(2) {
+  background: transparent;
+  color: var(--main-color);
+}
+.btn_box .btn:nth-child(2):hover {
+  background: var(--main-color);
+  color: var(--white-color);
+}
+
+.book_page.page_right {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.book_page .page_front,
+.book_page .page_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--pages-color);
+  padding: 1.5rem 2rem;
+}
+.book_page .page_front {
+  background: white;
+  border: 10px solid #000;
+  transform: rotateY(0deg) translateZ(1px);
+}
+.book_page .page_back {
+  background: rgb(196, 176, 176);
+  transform: rotateY(180deg) translateZ(1px);
+}
+.book_page.page_right.turn {
+  transform: rotateY(-180deg);
+}
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.number_page {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nextprev_btn {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--second-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.nextprev_btn:hover {
+  color: var(--main-color);
+}
+.nextprev_btn.back {
+  left: 1.5rem;
+}
+.services_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}

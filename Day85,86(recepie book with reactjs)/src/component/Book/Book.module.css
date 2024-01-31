@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative;
+  width: 80rem;
+  height: 45rem;
+  padding: 2rem;
+}
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--cover-color);
+  box-shadow: var(--box-shadow);
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  transform-origin: right;
+}
+.cover.cover_right.turn {
+  transform: rotateY(180deg);
+}
+.cover.cover_left {
+  z-index: -1;
+}
