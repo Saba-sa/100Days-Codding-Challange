@@ -2,11 +2,10 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { PostStore } from "../store/Post-list-store";
 const Post = ({ item }) => {
-  const { id, img, body, title, tags, reactionsNo } = item;
+  const { id, body, title, tags, reactions } = item;
   const { deletePost } = PostStore();
   return (
     <div className="card" style={{ width: "30rem" }}>
-      <img src={img} className="card-img-top w-50" alt={title} />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -14,7 +13,7 @@ const Post = ({ item }) => {
         </span>
         <p className="card-text">{body}</p>
         <div className="alert  alert-success border-0">
-          The post got {reactionsNo} people reactions
+          The post got {reactions} people reactions
         </div>
         {tags.map((tag, index) => {
           return (

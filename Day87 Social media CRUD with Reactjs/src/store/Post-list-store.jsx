@@ -5,7 +5,9 @@ const PostListContext = createContext({
   postList: [],
   addPost: () => {},
   deletePost: () => {},
+  add_initial_Post: () => {},
 });
+
 const PostListStore = ({ children }) => {
   const postListReducer = (currentPostList, action) => {
     let newPostList = currentPostList;
@@ -13,12 +15,20 @@ const PostListStore = ({ children }) => {
       newPostList = currentPostList.filter(
         (post) => post.id !== action.payload.postId
       );
+    } else if (action.type === "Add_initial_post") {
+      newPostList = action.payload.posts;
     } else if (action.type === "Add_post") {
       newPostList = [action.payload, ...currentPostList];
     }
     return newPostList;
   };
 
+  const add_initial_Post = (posts) => {
+    dispatchedPostList({
+      type: "Add_initial_post",
+      payload: { posts },
+    });
+  };
   const addPost = (userId, title, body, reaction, tags) => {
     dispatchedPostList({
       type: "Add_post",
@@ -43,13 +53,12 @@ const PostListStore = ({ children }) => {
     });
   };
 
-  const [postList, dispatchedPostList] = useReducer(
-    postListReducer,
-    default_post_list
-  );
+  const [postList, dispatchedPostList] = useReducer(postListReducer, []);
 
   return (
-    <PostListContext.Provider value={{ postList, addPost, deletePost }}>
+    <PostListContext.Provider
+      value={{ postList, add_initial_Post, addPost, deletePost }}
+    >
       {children}
     </PostListContext.Provider>
   );
@@ -57,24 +66,5 @@ const PostListStore = ({ children }) => {
 const PostStore = () => {
   return useContext(PostListContext);
 };
-const default_post_list = [
-  {
-    id: "1",
-    title: "Going to Gilgit",
-    body: "Hi friends i am going to Gilgit",
-    reactionsNo: 0,
-    userId: "user-9",
-    tags: ["Travel", "Vocation", "Gilgit", "Enjoy"],
-    img: Animi,
-  },
-  {
-    id: "2",
-    title: "passed Css",
-    body: "I passed Css hurray",
-    reactionsNo: 15,
-    userId: "user-12",
-    tags: ["css", "targetAchived", "unblevable", "Enjoy"],
-    img: Animi,
-  },
-];
+
 export { PostListStore, PostStore };
