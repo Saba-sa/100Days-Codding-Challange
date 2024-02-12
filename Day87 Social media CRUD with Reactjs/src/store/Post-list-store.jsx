@@ -1,4 +1,9 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useReducer,
+} from "react";
 import { v4 as uuidv4 } from "uuid";
 import Animi from "../assets/animi.jpg";
 const PostListContext = createContext({
@@ -44,14 +49,17 @@ const PostListStore = ({ children }) => {
     });
   };
 
-  const deletePost = (postId) => {
-    dispatchedPostList({
-      type: "Delete_post",
-      payload: {
-        postId,
-      },
-    });
-  };
+  const deletePost = useCallback(
+    (postId) => {
+      dispatchedPostList({
+        type: "Delete_post",
+        payload: {
+          postId,
+        },
+      });
+    },
+    [dispatchedPostList]
+  );
 
   const [postList, dispatchedPostList] = useReducer(postListReducer, []);
 
