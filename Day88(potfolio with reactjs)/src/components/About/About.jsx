@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./About.module.css";
 const About = () => {
   return (
-    <section className={styles.container}>
+    <section id="about" className={styles.container}>
       <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
         <img
