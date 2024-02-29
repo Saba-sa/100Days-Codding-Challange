@@ -1,0 +1,119 @@
+@import "../../../css-config/mixins.scss";
+.hero-banner {
+  padding: 40px 0;
+  position: relative;
+  background-image: linear-gradient(to right, #8e2de2, #4a00c0);
+  height: 80vh;
+  width: 100%;
+  @include xxl {
+    height: 60vh;
+  }
+  @include xl {
+    height: 50vh;
+  }
+  @include lg {
+    height: 40vh;
+  }
+  @include md {
+    height: 60vh;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1700px;
+    margin: 0 auto;
+    @include md {
+      overflow: hidden;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .img-content {
+      .banner-img {
+        position: relative;
+        z-index: 5;
+        width: 500px;
+        margin-bottom: 30px;
+        animation: animiUp 2s ease infinite alternate-reverse both;
+        @include xl {
+          width: 400px;
+        }
+        @include lg {
+          width: 300px;
+        }
+        @include md {
+          width: 250px;
+        }
+      }
+    }
+    .text-content {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 70px;
+      @include lg {
+        gap: 50px;
+      }
+      @include md {
+        gap: 40px;
+      }
+      h1 {
+        font-size: 150px;
+        @include lg {
+          font-size: 100px;
+        }
+      }
+      p {
+        width: 60%;
+        font-size: 20px;
+        @include xxl {
+          width: 80%;
+        }
+        @include xl {
+          width: 90%;
+        }
+        @include lg {
+          width: 100%;
+        }
+      }
+      .ctas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        @include lg {
+          gap: 10px;
+        }
+        .banner-cta {
+          font-size: 18px;
+          border: 3px solid white;
+          border-radius: 5px;
+          padding: 10px 30px;
+          &.v2 {
+            background: white;
+            color: black;
+          }
+          &:hover {
+            opacity: 0.9;
+            cursor: pointer;
+          }
+          @include md {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes animiUp {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}

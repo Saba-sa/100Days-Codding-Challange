@@ -1,0 +1,6 @@
+@import "../../css-config/mixins.scss";
+.main-content {
+  @include md {
+    margin: 0 auto;
+  }
+}

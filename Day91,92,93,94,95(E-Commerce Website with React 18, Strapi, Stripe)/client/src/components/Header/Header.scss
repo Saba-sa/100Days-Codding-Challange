@@ -1,0 +1,102 @@
+@import "../../css-config/mixins.scss";
+.main-header {
+  width: 100%;
+  padding: 0;
+  background: #212121;
+  color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 30;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    width: 90%;
+    max-width: 1700px;
+    margin: 0 auto;
+    @include md {
+      overflow: hidden;
+    }
+    .left {
+      list-style-type: none;
+      display: flex;
+      gap: 25px;
+      width: 100%;
+      text-align: left;
+      @include md {
+        display: none;
+      }
+      li {
+        font-size: 17px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+    .center {
+      width: 100%;
+      text-align: center;
+      font-size: 42px;
+      font-weight: 900;
+      cursor: pointer;
+      @include md {
+        text-align: left;
+      }
+    }
+    .right {
+      width: 100%;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 30px;
+      @include md {
+        justify-content: center;
+      }
+      svg {
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .cart-icon {
+        position: relative;
+        div {
+          position: absolute;
+          top: -10px;
+          left: 55%;
+          background: #8e2de8;
+          color: white;
+          padding: 2.5px;
+          border-radius: 50%;
+          font-size: 20px;
+          width: 100%;
+          text-align: center;
+          animation: animi 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite
+            alternate-reverse both;
+        }
+      }
+    }
+  }
+  &.stickeyHeader {
+    position: -webkit-sticky;
+    position: sticky;
+    transform: translateY(-80px);
+    top: 0;
+    animation: stickyHeader 0.3s ease forwards;
+  }
+}
+@keyframes animi {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

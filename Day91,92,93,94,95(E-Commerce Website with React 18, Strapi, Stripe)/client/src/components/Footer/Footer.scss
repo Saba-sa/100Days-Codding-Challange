@@ -1,0 +1,91 @@
+@import "../../css-config/mixins.scss";
+.footer {
+  padding: 50px 20px 0px;
+  max-width: 1700;
+  .footer-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: auto;
+    @include lg {
+      justify-content: start;
+    }
+    .col {
+      max-width: 400px;
+      width: -moz-fit-content;
+      width: fit-content;
+      .title {
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+      .text {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+      }
+      .c-item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        svg {
+          flex-shrink: 0;
+          font-size: 14px;
+          margin-right: 10px;
+          margin-top: 4px;
+          color: rgba(0, 0, 0, 0.5);
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+        .text {
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
+      span {
+        &.text {
+          display: block;
+          margin-bottom: 8px;
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
+    }
+
+    @include lg {
+      flex-flow: wrap;
+    }
+  }
+  .bottom-bar {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+    max-width: 1700;
+    width: 80%;
+    margin: 20px auto;
+    .bottom-bat-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .text {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      @include md {
+        flex-direction: column;
+      }
+    }
+  }
+}

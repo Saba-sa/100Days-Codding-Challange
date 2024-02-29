@@ -1,0 +1,14 @@
+@import "../../css-config/mixins.scss";
+.category-main-content {
+  width: 100%;
+  .layout {
+    max-width: 1700px;
+    width: 100%;
+    margin: auto;
+    .category-title {
+      font-size: 40px;
+      margin: 60px auto;
+      font-weight: 900;
+    }
+  }
+}

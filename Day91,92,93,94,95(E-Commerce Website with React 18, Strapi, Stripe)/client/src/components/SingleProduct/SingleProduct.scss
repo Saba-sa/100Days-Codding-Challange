@@ -1,0 +1,161 @@
+@import "../../css-config/mixins.scss";
+.single-product-main {
+  width: 100%;
+  margin: auto;
+  .layout {
+    max-width: 1700px;
+    width: 90%;
+    margin: 50px auto;
+    .single-product-page {
+      display: flex;
+      @include md {
+        flex-flow: wrap;
+        gap: 30px;
+      }
+      .left {
+        width: 50%;
+        height: auto;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      img {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 35px;
+        .name {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 20px;
+          @include md {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+        .price {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 20px;
+          @include md {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+        .description {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 20px;
+          color: #6b6b6b;
+          @include md {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+        .cart-buttons {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          @include md {
+            margin-bottom: 0;
+          }
+          .quantity-btns {
+            width: 120px;
+            display: flex;
+            border: 2px solid #6b6b6b;
+            margin-right: 10px;
+            border-radius: 5px;
+            span {
+              font-size: 24px;
+              line-height: 42px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              color: #6b6b6b;
+              width: 100%;
+              border-right: 1px solid #6b6b6b;
+              @include md {
+                font-size: 18px;
+                line-height: 28px;
+              }
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+          .cart-btn {
+            display: flex;
+            gap: 5px;
+            font-size: 18px;
+            line-height: 24px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #8e2de2;
+            color: #8e2de2;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.5s;
+            @include md {
+              font-size: 16px;
+              line-height: 20px;
+              padding: 10px 15px;
+            }
+            &:hover {
+              opacity: 0.9;
+              background-color: #8e2de2;
+              color: white;
+            }
+          }
+          @media (max-width: 390px) {
+            flex-flow: wrap;
+            gap: 20px;
+          }
+        }
+        .divider {
+          margin: 20px 0;
+          height: 1px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        .info-items {
+          .text-bold {
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            gap: 10px;
+            &:nth-child(1) {
+              margin-bottom: 20px;
+            }
+            span {
+              font-size: 18px;
+              line-height: 24px;
+              display: block;
+              color: #6b6b6b;
+              cursor: pointer;
+              @include md {
+                font-size: 16px;
+                line-height: 20px;
+              }
+            }
+            svg {
+              margin: 0 5px;
+              cursor: pointer;
+              transition: all 0.3s;
+              overflow: visible;
+              :hover {
+                color: #8e2de2;
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+        @media (max-width: 390px) {
+          padding: 0px 0px;
+        }
+      }
+    }
+  }
+}
