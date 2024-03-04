@@ -1,0 +1,88 @@
+@import "../../css-config/mixins.scss";
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 5px;
+    width: 50px;
+    height: 5px;
+    background-color: #8e2de2;
+  }
+}
+.about-container {
+  width: 100%;
+  padding: 40px 20px;
+  color: #212121;
+  .about-content {
+    width: 90%;
+    max-width: 1700px;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 20px;
+    @include md {
+      overflow: hidden;
+    }
+    .top-content {
+      p {
+        margin-bottom: 10px;
+      }
+      margin-bottom: 30px;
+    }
+    .blogs-content {
+      display: flex;
+      flex-direction: column;
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+        .box {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          width: 48%;
+          margin-bottom: 20px;
+          @include xl {
+            width: 100%;
+          }
+          .image {
+            width: 40%;
+            img {
+              width: 100%;
+              cursor: pointer;
+            }
+          }
+          .text {
+            width: 60%;
+            cursor: pointer;
+            .buttons {
+              button {
+                border: none;
+                color: #8e2de2;
+                font-size: 20px;
+                margin-top: 10px;
+                &:hover {
+                  color: #62209c;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .box {
+    flex-direction: column;
+  }
+  .about-container .about-content .blogs-content .boxes .box .image {
+    width: 100%;
+  }
+  .about-container .about-content .blogs-content .boxes .box .text {
+    width: 100%;
+  }
+}
