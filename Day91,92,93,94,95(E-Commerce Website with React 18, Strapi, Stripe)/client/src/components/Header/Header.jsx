@@ -3,17 +3,20 @@ import { useNavigate } from "react-router-dom";
 
 import { TbSearch } from "react-icons/tb";
 import { CgShoppingCart } from "react-icons/cg";
-import { AiOutlineHeart } from "react-icons/ai";
 
 import Search from "./Search/Search";
 import Cart from "../Cart/Cart";
 import { Appstore } from "../../utils/Context";
 
 import "./Header.scss";
+import { FaBars } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 const Header = () => {
   const [Scroll, setScroll] = useState(false);
   const [ShowCart, setShowCart] = useState(false);
   const [ShowSearch, setShowSearch] = useState(false);
+  const [showMenu, setshowMenu] = useState(false);
+  const [showList, setshowList] = useState(false);
   const [ShowCata, setShowCata] = useState(false);
 
   const navigate = useNavigate();
@@ -74,14 +77,81 @@ const Header = () => {
           </div>
           <div className="right">
             <TbSearch onClick={() => toggleCart(setShowSearch, ShowSearch)} />
-            <AiOutlineHeart />
             <span className="cart-icon">
               <CgShoppingCart
                 onClick={() => toggleCart(setShowCart, ShowCart)}
               />
               {!!cartCounts && <div>{cartCounts}</div>}
             </span>
+            <div className="bar">
+              {showMenu ? (
+                <RxCross2 onClick={() => setshowMenu(!showMenu)} />
+              ) : (
+                <FaBars onClick={() => setshowMenu(!showMenu)} />
+              )}
+            </div>
           </div>
+          {showMenu && (
+            <div className="menuFloating">
+              <ul className="left">
+                <li
+                  onClick={() => {
+                    navigate("/");
+                    setShowCata(false);
+                    setshowMenu(!showMenu);
+                  }}
+                >
+                  Home
+                </li>
+                <li
+                  onClick={() => {
+                    navigate("/about");
+                    setShowCata(false);
+                    setshowMenu(!showMenu);
+                  }}
+                >
+                  About
+                </li>
+                <li onClick={() => setshowList(!showList)}>Categories</li>
+              </ul>
+              {showList && (
+                <div className="floating">
+                  <p
+                    onClick={() => {
+                      handleClick("1");
+                      setshowMenu(!showMenu);
+                    }}
+                  >
+                    HeadPhones
+                  </p>
+                  <p
+                    onClick={() => {
+                      handleClick("2");
+                      setshowMenu(!showMenu);
+                    }}
+                  >
+                    Wireless EarBuds
+                  </p>
+                  <p
+                    onClick={() => {
+                      handleClick("3");
+                      setshowMenu(!showMenu);
+                    }}
+                  >
+                    Speakers
+                  </p>
+                  <p
+                    onClick={() => {
+                      handleClick("4");
+                      setshowMenu(!showMenu);
+                    }}
+                  >
+                    Smart Watches
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </header>
       {ShowCart && <Cart setShowCart={setShowCart} />}

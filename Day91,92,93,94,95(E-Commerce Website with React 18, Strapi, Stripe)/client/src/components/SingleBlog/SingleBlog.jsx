@@ -15,6 +15,12 @@ const SingleBlog = () => {
           <h1>{title}</h1>
           <p>{description}</p>
           <img src={require(`../../assets/images/${img}`)} alt={title} />
+          <p>{description}</p>
+          <p>{description}</p>
+          <p>{description}</p>
+          <p>{description}</p>
+          <p>{description}</p>
+          <p>{description}</p>
         </div>
         <div className="right">
           <Blog singlePost={true} />

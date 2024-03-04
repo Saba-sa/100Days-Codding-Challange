@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "./Banner.scss";
 const Banner = () => {
   return (
     <div className="hero-banner">
       <div className="content">
         <div className="text-content">
-          <h1>SALES</h1>
+          <h2>SALES</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eius
             eveniet eos obcaeca.
@@ -16,7 +17,7 @@ const Banner = () => {
         </div>
         <div className="img-content">
           <img
-            src={require("../../../assets/banner-img.png")}
+            src={require("../../../assets/banner.webp")}
             alt=""
             className="banner-img"
           />

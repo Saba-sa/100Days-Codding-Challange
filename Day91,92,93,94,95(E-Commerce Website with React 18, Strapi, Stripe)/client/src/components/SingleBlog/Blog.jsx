@@ -17,11 +17,11 @@ const Blog = ({ singlePost }) => {
               {singlePost ? (
                 <span>{description.slice(0, 120)}...</span>
               ) : (
-                <span>{description.slice(0, 400)}...</span>
+                <span>{description.slice(0, 200)}...</span>
               )}{" "}
               <div className="buttons">
                 <button className="btn" onClick={() => Navigate(`/blog/${id}`)}>
-                  read more...
+                  read more
                 </button>
               </div>
             </div>

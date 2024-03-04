@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <div className="bottom-bar">
         <div className="bottom-bat-content">
-          <div className="text">© 2021 Saba Ali. All rights reserved.</div>
+          <div className="text">© 2024 Saba Ali. All rights reserved.</div>
           <img src={require("../../assets/payments.png")} alt="" />
         </div>
       </div>

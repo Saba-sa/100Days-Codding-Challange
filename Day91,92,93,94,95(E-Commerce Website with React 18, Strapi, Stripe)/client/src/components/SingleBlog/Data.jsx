@@ -34,4 +34,32 @@ export const Data = [
     description:
       "Post no 5 Description Lorem ipsum dolor, sit amet consectetur adipisicing dipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minuselit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minus molestias molestiae voluptatum dolores.",
   },
+  {
+    id: 6,
+    img: "modal6.jpg",
+    title: "Post no 6 Title",
+    description:
+      "Post no 6 Description Lorem ipsum dolor, sit amet consectetur adipisicing dipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minuselit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minus molestias molestiae voluptatum dolores.",
+  },
+  {
+    id: 7,
+    img: "modal7.jpg",
+    title: "Post no 7 Title",
+    description:
+      "Post no 7 Description Lorem ipsum dolor, sit amet consectetur adipisicing dipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minuselit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minus molestias molestiae voluptatum dolores.",
+  },
+  {
+    id: 8,
+    img: "modal8.jpg",
+    title: "Post no 8 Title",
+    description:
+      "Post no 8 Description Lorem ipsum dolor, sit amet consectetur adipisicing dipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minuselit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minus molestias molestiae voluptatum dolores.",
+  },
+  {
+    id: 9,
+    img: "modal9.jpg",
+    title: "Post no 9 Title",
+    description:
+      "Post no 9 Description Lorem ipsum dolor, sit amet consectetur adipisicing dipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minusdipisicing elit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minuselit. Nostrum mollitia labore accusantium exercitationem soluta! Rem tempora nulla, officia numquam omnis aperiam, atque nihil pariatur voluptates minus molestias molestiae voluptatum dolores.",
+  },
 ];

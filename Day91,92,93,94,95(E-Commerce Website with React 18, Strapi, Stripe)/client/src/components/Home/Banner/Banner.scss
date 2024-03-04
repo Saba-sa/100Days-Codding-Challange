@@ -2,7 +2,7 @@
 .hero-banner {
   padding: 40px 0;
   position: relative;
-  background-image: linear-gradient(to right, #8e2de2, #4a00c0);
+  background-image: linear-gradient(to right, #212121, #212121f1);
   height: 80vh;
   width: 100%;
   @include xxl {
@@ -61,7 +61,7 @@
       @include md {
         gap: 40px;
       }
-      h1 {
+      h2 {
         font-size: 150px;
         @include lg {
           font-size: 100px;
