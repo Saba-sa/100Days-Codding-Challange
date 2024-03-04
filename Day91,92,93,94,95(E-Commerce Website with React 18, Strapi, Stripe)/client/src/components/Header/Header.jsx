@@ -14,6 +14,7 @@ const Header = () => {
   const [Scroll, setScroll] = useState(false);
   const [ShowCart, setShowCart] = useState(false);
   const [ShowSearch, setShowSearch] = useState(false);
+  const [ShowCata, setShowCata] = useState(false);
 
   const navigate = useNavigate();
   const { cartCounts } = Appstore();
@@ -22,6 +23,7 @@ const Header = () => {
     const offset = window.scrollY;
     if (offset > 200) {
       setScroll(true);
+      setShowCata(false);
     } else {
       setScroll(false);
     }
@@ -32,15 +34,41 @@ const Header = () => {
   const toggleCart = (set, vari) => {
     set(!vari);
   };
+  const handleClick = (id) => {
+    navigate(`category/${id}`);
+    setShowCata(false);
+  };
   return (
     <>
       <header className={`main-header ${Scroll && "stickeyHeader"}`}>
         <div className="header-content">
           <ul className="left">
-            <li onClick={() => navigate("/")}>Home</li>
-            <li onClick={() => navigate("/about")}>About</li>
-            <li onClick={() => navigate("/")}>Categories</li>
+            <li
+              onClick={() => {
+                navigate("/");
+                setShowCata(false);
+              }}
+            >
+              Home
+            </li>
+            <li
+              onClick={() => {
+                navigate("/about");
+                setShowCata(false);
+              }}
+            >
+              About
+            </li>
+            <li onClick={() => setShowCata(true)}>Categories</li>
           </ul>
+          {ShowCata && (
+            <div className="floating-catag">
+              <p onClick={() => handleClick("1")}>HeadPhones</p>
+              <p onClick={() => handleClick("2")}>Wireless EarBuds</p>
+              <p onClick={() => handleClick("3")}>Speakers</p>
+              <p onClick={() => handleClick("4")}>Smart Watches</p>
+            </div>
+          )}
           <div className="center" onClick={() => navigate("/")}>
             Logo.
           </div>

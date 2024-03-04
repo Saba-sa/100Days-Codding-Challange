@@ -31,6 +31,7 @@ const Home = () => {
         console.log(err);
       });
   };
+  console.log(categories);
   return (
     <div>
       <Banner />
