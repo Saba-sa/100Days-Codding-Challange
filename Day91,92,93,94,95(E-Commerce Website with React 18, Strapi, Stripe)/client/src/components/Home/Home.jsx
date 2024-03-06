@@ -2,11 +2,13 @@ import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
 import Products from "../Products/Products";
 import "./Home.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fetchDataFromAPI } from "../../utils/api";
 import { Appstore } from "../../utils/Context";
+import Loader from "./../Loader/Loader";
 const Home = () => {
   const { categories, setCategories, products, setProducts } = Appstore();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getCategories();
@@ -17,6 +19,7 @@ const Home = () => {
     fetchDataFromAPI("/api/products?populate=*")
       .then((data) => {
         setProducts(data.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -26,19 +29,25 @@ const Home = () => {
     fetchDataFromAPI("/api/categories?populate=*")
       .then((data) => {
         setCategories(data.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-  console.log(categories);
   return (
     <div>
       <Banner />
       <div className="main-content">
         <div className="lyout">
-          <Category categories={categories} />
-          <Products products={products} headingtext="Popular Products" />
+          {loading ? (
+            <Loader />
+          ) : (
+            <>
+              <Category categories={categories} />
+              <Products products={products} headingtext="Popular Products" />
+            </>
+          )}
         </div>
       </div>
     </div>

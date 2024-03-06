@@ -34,7 +34,6 @@ h1 {
     }
     .right {
       width: 30%;
-      border: 1px solid #000;
       @include lg {
         width: 100%;
         display: flex;
