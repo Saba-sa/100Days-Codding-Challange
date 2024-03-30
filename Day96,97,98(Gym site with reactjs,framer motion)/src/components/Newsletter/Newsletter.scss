@@ -1,0 +1,66 @@
+@import "../../css-config/mixins.scss";
+.newsLetter {
+  position: relative;
+  border-bottom: 4px solid white;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include lg {
+      flex-direction: column;
+    }
+    .left {
+      width: 50%;
+      @include lg {
+        width: 90%;
+      }
+      p {
+        font-size: 4.2rem;
+        span {
+          color: white;
+          font-size: 4rem;
+        }
+      }
+    }
+    .right {
+      margin-bottom: 20px;
+      form {
+        width: 100%;
+        height: 50px;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--caloryCard);
+        @include lg {
+          width: 90%;
+        }
+        input {
+          width: 100%;
+          border: none;
+          border-radius: 5px;
+          padding: 0 20px;
+          font-size: 1.5rem;
+          outline: none;
+          background: transparent;
+          color: white;
+          &::placeholder {
+            color: white;
+          }
+        }
+        button {
+          width: 50%;
+          height: 50px;
+          border: none;
+          border-radius: 5px;
+          padding: 0 20px;
+          font-size: 1.2rem;
+          outline: none;
+          color: white;
+          background: var(--orange);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

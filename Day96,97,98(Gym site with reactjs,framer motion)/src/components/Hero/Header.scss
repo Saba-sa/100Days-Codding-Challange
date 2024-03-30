@@ -1,0 +1,73 @@
+@import "../../css-config/mixins.scss";
+.header {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  @include md {
+    width: 100%;
+  }
+  .bar {
+    background: var(--caloryCard);
+    font-size: 27px;
+    color: var(--orange);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 7;
+    right: 20px;
+    display: none;
+    @include sm {
+      display: inline;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    @include sm {
+      display: none;
+    }
+    li {
+      list-style: none;
+      color: white;
+      font-size: 20px;
+      text-transform: capitalize;
+      cursor: pointer;
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+  ul.showMenu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    gap: 35px;
+    position: fixed;
+    z-index: 7;
+    right: 10px;
+    top: 7%;
+    background: var(--caloryCard);
+    width: 100%;
+    li {
+      list-style: none;
+      color: white;
+      font-size: 20px;
+      text-transform: capitalize;
+      cursor: pointer;
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+  img {
+    width: 13%;
+    @include md {
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@import "../../css-config/mixins.scss";
+
+.testimonial {
+  padding: 20px 0;
+  .wrapper {
+    display: flex;
+    gap: 1rem;
+    padding: 30px 2rem;
+
+    @include lg {
+      flex-direction: column-reverse;
+    }
+
+    .left {
+      display: flex;
+      flex: 1 1;
+      flex-direction: column;
+      text-transform: uppercase;
+      color: white;
+      @include lg {
+        margin-top: 290px;
+      }
+      @include sm {
+        margin-top: 600px;
+      }
+
+      & > :nth-child(1) {
+        color: var(--orange);
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      & > :nth-child(2),
+      & > :nth-child(3) {
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 20px 0;
+      }
+
+      p {
+        letter-spacing: 4px;
+        line-height: 30px;
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+
+      h3 {
+        color: var(--orange);
+        font-size: 21px;
+        font-weight: normal;
+
+        span {
+          color: white;
+        }
+      }
+
+      .ruler {
+        width: 20%;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--orange);
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .right {
+      position: relative;
+      flex: 1 1;
+      height: auto;
+
+      .arrow {
+        position: absolute;
+        left: 0%;
+        top: 90%;
+        transform: translate(-10%, -50%);
+        display: flex;
+        gap: 20px;
+        color: white;
+        font-size: 30px;
+        z-index: 4;
+
+        svg {
+          cursor: pointer;
+        }
+
+        @include lg {
+          justify-content: flex-end;
+          align-items: center;
+          width: 20%;
+        }
+        @include md {
+          left: -30%;
+        }
+      }
+
+      .image-section {
+        position: relative;
+        height: 100%;
+
+        .bor {
+          width: 40%;
+          height: 95%;
+          background: var(--planCard);
+          position: absolute;
+          top: 15%;
+          left: 36%;
+          @include xxxl {
+            width: 55%;
+          }
+
+          @include xl {
+            width: 70%;
+          }
+
+          @include lg {
+            width: 25%;
+            height: 350px;
+            left: 45%;
+            top: -90px;
+          }
+          @include md {
+            width: 36%;
+            height: 410px;
+            left: 40%;
+          }
+          @include sm {
+            width: 80%;
+            height: 610px;
+            left: 10%;
+            z-index: -2;
+          }
+          &:nth-child(1) {
+            border: 4px solid var(--orange);
+            background: transparent;
+            top: 0%;
+            left: 30%;
+
+            @include lg {
+              left: 35%;
+              top: -110px;
+              width: 30%;
+            }
+            @include md {
+              width: 40%;
+              left: 28%;
+            }
+            @include sm {
+              width: 80%;
+              left: 0%;
+            }
+          }
+        }
+
+        img {
+          width: 40%;
+          height: 100%;
+          position: absolute;
+          top: 5%;
+          left: 33%;
+          z-index: 1;
+
+          @include xxxl {
+            width: 55%;
+          }
+
+          @include xl {
+            width: 70%;
+          }
+
+          @include lg {
+            width: 30%;
+            height: auto;
+            left: 38%;
+            top: -90px;
+            transform: translate(40%, 0%);
+          }
+
+          @include md {
+            width: 42%;
+            height: 400px;
+            left: 30%;
+            top: -90px;
+            transform: translate(40%, 0%);
+            border-radius: 10px;
+          }
+          @include sm {
+            width: 80%;
+            left: 10px;
+            transform: translate(-0, -0);
+            height: 580px;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
