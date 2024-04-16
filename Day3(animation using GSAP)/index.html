@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="navi">
-            <img src="https://www.chungiyoo.com/img/faces/smile%2001.svg" alt="logo">
+      <div class="navi">
+        <img
+          src="https://www.chungiyoo.com/img/faces/smile%2001.svg"
+          alt="logo"
+        />
         <h5 class="logo-text">RandomText</h5>
-        </div>
-        <div class="part-1">
-        </div>
+      </div>
+      <div class="part-1"></div>
 
-        <div class="part-2"></div>
-        <div class="part-3">
-            <div class="text">
-            <h1 class="text-animi">Nature</h1>
-               <h1 class="text-animi">Morte</h1>
-               <h1 class="text-animi">For</h1>
-               <h1 class="text-animi">Hartper's</h1>
-           </div>
-            <div class="small-img">
-            </div>
-            <div class="vertical-text">
-                <h1>SelectionWinter</h1>
-            </div>
+      <div class="part-2"></div>
+      <div class="part-3">
+        <div class="text">
+          <h1 class="text-animi">Nature</h1>
+          <h1 class="text-animi">Morte</h1>
+          <h1 class="text-animi">For</h1>
+          <h1 class="text-animi">Hartper's</h1>
         </div>
+        <div class="small-img">
+          <img src="./images/img.webp" alt="" />
+        </div>
+        <div class="vertical-text">
+          <h1>SelectionWinter</h1>
+        </div>
+      </div>
     </div>
     <!-- cdn of split -->
     <script src="https://unpkg.com/split-type"></script>
     <!-- cdn of gsap -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    const time = gsap.timeline();
-    const myText = new SplitType(".text-animi");
-    const logo = new SplitType(".logo-text");
-    
-    time.to('.char', {
-      x: 0,
-      stagger: 0.1,
-      duration: 0.1
-    });
-    
-    const time2 = gsap.timeline();
-    time2.to('.char', {
-      y: 0,
-      stagger: 0.1,
-      delay: 0.2,
-      duration: 0.3
-    });
-    
-    const time3 = gsap.timeline();
-    time3.to('.char', {
-      x: 0,
-      stagger: 0.1,
-      duration: 0.4
-    });
-    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const time = gsap.timeline();
+      const myText = new SplitType(".text-animi");
+      const logo = new SplitType(".logo-text");
 
-time.staggerFrom('.char', 0.5, {
-    y:50, 
-    z: 0, 
-    ease: Elastic.easeOut.config(1, 0.7)}, 
-    0.08)
-</script>    
-</body>
+      time.to(".char", {
+        x: 0,
+        stagger: 0.1,
+        duration: 0.1,
+      });
+
+      const time2 = gsap.timeline();
+      time2.to(".char", {
+        y: 0,
+        stagger: 0.1,
+        delay: 0.2,
+        duration: 0.3,
+      });
+
+      const time3 = gsap.timeline();
+      time3.to(".char", {
+        x: 0,
+        stagger: 0.1,
+        duration: 0.4,
+      });
+
+      time.staggerFrom(
+        ".char",
+        0.5,
+        {
+          y: 50,
+          z: 0,
+          ease: Elastic.easeOut.config(1, 0.7),
+        },
+        0.08
+      );
+    </script>
+  </body>
 </html>
